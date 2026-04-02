@@ -111,7 +111,7 @@ const DashboardLayout = ({ userRole = "donor" }) => {
       items: [
         { path: "/lab", label: "Dashboard", icon: BarChart3, badge: null },
         { path: "/lab/inventory", label: "Inventory", icon: Droplet, badge: null },
-        { path: "/lab/Donor", label: "Donors", icon: User, badge: null },
+        { path: "/lab/donor", label: "Donors", icon: User, badge: null },
         { path: "/lab/camps", label: "Camps", icon: Calendar, badge: null },
         { path: "/lab/requests", label: "Requests", icon: ClipboardList, badge: null },
         { path: "/lab/profile", label: "Profile", icon: CheckCircle, badge: null },

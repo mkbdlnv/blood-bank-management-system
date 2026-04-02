@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Phone,
   Mail,
@@ -11,10 +11,41 @@ import {
   Facebook,
   Linkedin,
 } from "lucide-react";
+import { toast } from "react-hot-toast";
 import Header from "../Header";
 import Footer from "../Footer";
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!form.fullName || !form.email || !form.message) {
+      toast.error("Please fill in your name, email, and message.");
+      return;
+    }
+
+    const subject = encodeURIComponent(`BloodConnect enquiry from ${form.fullName}`);
+    const body = encodeURIComponent(
+      `Name: ${form.fullName}\nEmail: ${form.email}\nPhone: ${form.phone || "Not provided"}\n\nMessage:\n${form.message}`
+    );
+
+    window.location.href = `mailto:support@bloodconnect.org?subject=${subject}&body=${body}`;
+    toast.success("Opening your email app...");
+    setForm({ fullName: "", email: "", phone: "", message: "" });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       <Header />
@@ -68,7 +99,7 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Phone className="text-red-600 mr-3" />
-                <span className="text-gray-700">+91 1234567890cd</span>
+                <span className="text-gray-700">+91 12345 67890</span>
               </div>
               <div className="flex items-center">
                 <Mail className="text-red-600 mr-3" />
@@ -90,7 +121,7 @@ const Contact = () => {
           </div>
 
           {/* FORM */}
-          <form className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
+          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
             {/* Name */}
             <div>
               <label className="font-medium text-gray-700">Full Name</label>
@@ -98,7 +129,10 @@ const Contact = () => {
                 <User className="text-gray-500 mr-2" />
                 <input  
                   type="text"
+                  name="fullName"
                   placeholder="Enter your name"
+                  value={form.fullName}
+                  onChange={handleChange}
                   className="w-full p-3 outline-none"
                 />
               </div>
@@ -111,7 +145,10 @@ const Contact = () => {
                 <Mail className="text-gray-500 mr-2" />
                 <input  
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
+                  value={form.email}
+                  onChange={handleChange}
                   className="w-full p-3 outline-none"
                 />
               </div>
@@ -124,7 +161,10 @@ const Contact = () => {
                 <Phone className="text-gray-500 mr-2" />
                 <input  
                   type="text"
+                  name="phone"
                   placeholder="Enter phone number"
+                  value={form.phone}
+                  onChange={handleChange}
                   className="w-full p-3 outline-none"
                 />
               </div>
@@ -137,7 +177,10 @@ const Contact = () => {
                 <MessageSquare className="text-gray-500 mr-2 mt-3" />
                 <textarea
                   rows={4}
+                  name="message"
                   placeholder="Write your message here..."
+                  value={form.message}
+                  onChange={handleChange}
                   className="w-full p-3 outline-none"
                 ></textarea>
               </div>

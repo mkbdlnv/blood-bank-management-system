@@ -197,7 +197,7 @@ const LandingPage = () => {
                   Get Started <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
               </Link>
-              <Link to="#about">
+              <Link to="/about">
                 <button className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-xl border-2 border-white text-white hover:bg-white/10 transition-all duration-300">
                   Learn More
                 </button>

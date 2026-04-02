@@ -1,5 +1,6 @@
 import Donor from "../models/donorModel.js";
 import Facility from "../models/facilityModel.js";
+import BloodCamp from "../models/bloodCampModel.js";
 
 // 🧩 Get Dashboard Overview Stats
 export const getDashboardStats = async (req, res) => {
@@ -51,6 +52,20 @@ export const getAllFacilities = async (req, res) => {
     res.status(200).json({ facilities });
   } catch (err) {
     res.status(500).json({ message: "Error fetching facilities" });
+  }
+};
+
+// 🩸 Get All Blood Camps for Admin
+export const getAllCamps = async (req, res) => {
+  try {
+    const camps = await BloodCamp.find()
+      .populate("hospital", "name email phone facilityType address")
+      .sort({ date: 1 });
+
+    res.status(200).json({ camps });
+  } catch (err) {
+    console.error("Error fetching camps:", err);
+    res.status(500).json({ message: "Error fetching camps" });
   }
 };
 

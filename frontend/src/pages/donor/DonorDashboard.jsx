@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import {
   Droplet,
   Calendar,
@@ -27,6 +28,7 @@ import { toast } from "react-hot-toast";
 const API_URL = "/api/donor";
 
 const DonorDashboard = () => {
+  const navigate = useNavigate();
   const [dashboard, setDashboard] = useState(null);
   const [donor, setDonor] = useState(null);
   const [history, setHistory] = useState([]);
@@ -110,6 +112,69 @@ const DonorDashboard = () => {
     await fetchDashboardData();
     setRefreshing(false);
     toast.success("Dashboard updated");
+  };
+
+  const handleDownloadCertificate = () => {
+    const donorName = donor?.fullName || donor?.name || "Blood Donor";
+    const totalDonations = dashboard?.stats?.totalDonations || 0;
+    const content = [
+      "Blood Donation Appreciation Certificate",
+      "",
+      `Presented to: ${donorName}`,
+      `Blood Group: ${donor?.bloodGroup || "N/A"}`,
+      `Total Donations: ${totalDonations}`,
+      `Lives Impacted: ${dashboard?.stats?.livesImpacted || 0}`,
+      "",
+      "Thank you for supporting patients in need.",
+      `Generated on: ${new Date().toLocaleDateString()}`,
+    ].join("\n");
+
+    const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `${donorName.toLowerCase().replace(/\s+/g, "-") || "donor"}-certificate.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    toast.success("Certificate downloaded.");
+  };
+
+  const handleShareAchievement = async () => {
+    const donorName = donor?.fullName || donor?.name || "A BloodConnect donor";
+    const totalDonations = dashboard?.stats?.totalDonations || 0;
+    const text = `${donorName} has completed ${totalDonations} blood donation${totalDonations === 1 ? "" : "s"} and helped save lives through BloodConnect.`;
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: "Blood Donation Achievement",
+          text,
+        });
+        toast.success("Share sheet opened.");
+        return;
+      }
+
+      await navigator.clipboard.writeText(text);
+      toast.success("Achievement text copied to clipboard.");
+    } catch (error) {
+      console.error("Share error:", error);
+      toast.error("Unable to share right now.");
+    }
+  };
+
+  const handleInviteFriends = async () => {
+    const inviteText =
+      "Join me on BloodConnect and help save lives by becoming a blood donor. You can register and track your impact directly from the platform.";
+
+    try {
+      await navigator.clipboard.writeText(inviteText);
+      toast.success("Invite message copied to clipboard.");
+    } catch (error) {
+      console.error("Clipboard error:", error);
+      toast.error("Unable to copy invite message.");
+    }
   };
 
   useEffect(() => {
@@ -293,8 +358,8 @@ const DonorDashboard = () => {
             <EmptyState
               icon={<Droplet className="w-8 h-8" />}
               message="No donation history yet"
-              actionText="Make your first donation"
-              onAction={() => toast.success("Find nearby blood camps to get started!")}
+              actionText="Browse blood camps"
+              onAction={() => navigate("/donor/camps")}
             />
           )}
         </Section>
@@ -332,28 +397,28 @@ const DonorDashboard = () => {
             icon={<Download className="w-5 h-5" />}
             title="Download Certificate"
             description="Get your donation certificate"
-            onClick={() => toast.success("Certificate download started!")}
+            onClick={handleDownloadCertificate}
             color="blue"
           />
           <ActionCard
             icon={<Share2 className="w-5 h-5" />}
             title="Share Achievement"
             description="Share your impact with others"
-            onClick={() => toast.success("Share your life-saving journey!")}
+            onClick={handleShareAchievement}
             color="green"
           />
           <ActionCard
             icon={<Calendar className="w-5 h-5" />}
             title="Schedule Donation"
             description="Book your next donation"
-            onClick={() => toast.success("Find nearby blood donation camps!")}
+            onClick={() => navigate("/donor/camps")}
             color="red"
           />
           <ActionCard
             icon={<Users className="w-5 h-5" />}
             title="Invite Friends"
             description="Grow the donor community"
-            onClick={() => toast.success("Invite friends to become donors!")}
+            onClick={handleInviteFriends}
             color="purple"
           />
         </div>
