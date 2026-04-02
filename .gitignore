@@ -25,3 +25,10 @@ dist-ssr
 
 # Environment Variables
 .env
+
+# QA artifacts
+qa/node_modules
+qa/playwright-report
+qa/test-results
+backend.log
+frontend.log

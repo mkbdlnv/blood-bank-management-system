@@ -1,0 +1,90 @@
+const DEFAULT_PASSWORD = "QaPass123!";
+
+function toSafeSlug(value) {
+  return String(value || "local")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 24) || "local";
+}
+
+function toDigits(value, minLength = 6) {
+  const digits = String(value || "").replace(/\D/g, "") || "1234567890";
+  return digits.repeat(Math.ceil(minLength / digits.length)).slice(0, minLength);
+}
+
+export function buildQaScenario(runId = "local") {
+  const slug = toSafeSlug(runId);
+  const digits = toDigits(runId, 10);
+  const pincode = `5${toDigits(runId, 5)}`;
+
+  return {
+    donor: {
+      email: `qa.donor.${slug}@example.com`,
+      password: DEFAULT_PASSWORD,
+      fullName: `QA Donor ${slug}`,
+      phone: `9${digits.slice(1)}`,
+      emergencyContact: `8${digits.slice(1)}`,
+      address: {
+        street: "123 QA Avenue",
+        city: "Mumbai",
+        state: "Maharashtra",
+        pincode,
+      },
+      age: 28,
+      gender: "Male",
+      bloodGroup: "O+",
+      weight: 72,
+      role: "donor",
+    },
+    hospital: {
+      email: `qa.hospital.${slug}@example.com`,
+      password: DEFAULT_PASSWORD,
+      name: `QA Hospital ${slug}`,
+      phone: `9${digits.slice(1)}`,
+      emergencyContact: `8${digits.slice(1)}`,
+      address: {
+        street: "45 Hospital Road",
+        city: "Mumbai",
+        state: "Maharashtra",
+        pincode,
+      },
+      registrationNumber: `HOSP-${slug}`.toUpperCase(),
+      facilityType: "hospital",
+      role: "hospital",
+      facilityCategory: "Private",
+      documents: {
+        registrationProof: {
+          url: "https://example.com/qa-hospital-registration.pdf",
+          filename: "qa-hospital-registration.pdf",
+        },
+      },
+    },
+    bloodLab: {
+      email: `qa.lab.${slug}@example.com`,
+      password: DEFAULT_PASSWORD,
+      name: `QA Blood Lab ${slug}`,
+      phone: `7${digits.slice(1)}`,
+      emergencyContact: `6${digits.slice(1)}`,
+      address: {
+        street: "77 Lab Street",
+        city: "Mumbai",
+        state: "Maharashtra",
+        pincode,
+      },
+      registrationNumber: `LAB-${slug}`.toUpperCase(),
+      facilityType: "blood-lab",
+      role: "blood-lab",
+      facilityCategory: "Private",
+      documents: {
+        registrationProof: {
+          url: "https://example.com/qa-blood-lab-registration.pdf",
+          filename: "qa-blood-lab-registration.pdf",
+        },
+      },
+    },
+  };
+}
+
+export { DEFAULT_PASSWORD };
