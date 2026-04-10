@@ -11,12 +11,29 @@ import { swaggerUi, swaggerDocs } from "./openapi/index.js"
 dotenv.config();
 const app = express();
 
+const allowedOrigins = (process.env.ALLOWED_ORIGINS ||
+  "http://localhost:5173,http://127.0.0.1:5173,http://localhost,http://127.0.0.1")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
 app.use(express.json());
 
 app.use(cors({
-  origin: "http://localhost:5173", // or 3000
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+      return;
+    }
+
+    callback(new Error(`Origin ${origin} is not allowed by CORS`));
+  },
   credentials: true,
 }));
+
+app.get("/health", (_req, res) => {
+  res.status(200).json({ status: "ok" });
+});
 
 app.use('/api/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 

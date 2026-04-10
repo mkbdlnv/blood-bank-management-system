@@ -101,6 +101,12 @@ npm install
 npm run dev
 ```
 
+If you want to connect the frontend to a remote backend instead of the local Vite proxy, create a frontend env file and set:
+
+```bash
+VITE_API_BASE_URL=https://your-backend-service.onrender.com
+```
+
 ### 🐳 Another Option: Run with Docker (Recommended)
 
 Make sure Docker Desktop is installed and running.
@@ -120,6 +126,17 @@ Seed Admin User (if needed)
 ```bash
 docker exec -it backend node seedAdmin.js
 ```
+
+## Staging Deployment
+
+The repository is prepared for a gated staging deployment on Render:
+
+- Render backend web service
+- Render frontend static site
+- MongoDB Atlas for the database
+- GitHub Actions deployment blocked unless the QA pipeline passes
+
+Setup details are documented in [RENDER_STAGING_SETUP.md](/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/RENDER_STAGING_SETUP.md).
 
 **Login Page**
 
