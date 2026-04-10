@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "qa:test:all:docker": "npm run qa:test:api && npm run qa:test:docker",
+    "qa:test:coverage": "npm --prefix backend run test:coverage",
     "qa:test:docker": "npm --prefix qa run test:docker",
     "qa:test:ui:docker": "npm --prefix qa run test:ui:docker",
     "qa:test:api": "npm --prefix backend test",
