@@ -10,6 +10,9 @@ import {
 import { test, expect } from "../support/fixtures.js";
 import { loginAs, registerDonor } from "../support/uiHelpers.mjs";
 
+/**
+ * Test that a donor can register through the UI and successfully log in to their dashboard.
+ */
 test("donor can register through the UI and log in to the dashboard", async ({ page, scenario }) => {
   await registerDonor(page, scenario.donor);
 
@@ -19,6 +22,9 @@ test("donor can register through the UI and log in to the dashboard", async ({ p
   await expect(page.getByText(scenario.donor.fullName)).toBeVisible();
 });
 
+/**
+ * Test that a hospital can log in, create a blood request, and view it in their request history.
+ */
 test("hospital can log in, create a blood request, and see it in request history", async ({ page, scenario }) => {
   await registerApprovedFacility(scenario.hospital);
   await registerApprovedFacility(scenario.bloodLab);
@@ -52,6 +58,9 @@ test("hospital can log in, create a blood request, and see it in request history
   await expect(requestsTable).toContainText("Pending");
 });
 
+/**
+ * Test that a blood lab can add stock to inventory and process an incoming hospital blood request.
+ */
 test("blood lab can add stock and process an incoming hospital request", async ({ page, scenario }) => {
   const approvedHospital = await registerApprovedFacility(scenario.hospital);
   const approvedLab = await registerApprovedFacility(scenario.bloodLab);
@@ -79,6 +88,9 @@ test("blood lab can add stock and process an incoming hospital request", async (
   await expect(page.getByText("Processed on")).toBeVisible();
 });
 
+/**
+ * Test that an admin can approve one facility and reject another from the facility verification screen.
+ */
 test("admin can approve one facility and reject another from the verification screen", async ({ page, scenario }) => {
   await registerPendingFacility(scenario.hospital);
   await registerPendingFacility(scenario.bloodLab);

@@ -1,5 +1,13 @@
+/**
+ * Default password used for QA test accounts.
+ */
 const DEFAULT_PASSWORD = "QaPass123!";
 
+/**
+ * Converts a value to a safe slug format for use in emails, names, etc.
+ * @param {string|number} value - The value to convert.
+ * @returns {string} A safe slug string.
+ */
 function toSafeSlug(value) {
   return String(value || "local")
     .trim()
@@ -9,11 +17,22 @@ function toSafeSlug(value) {
     .slice(0, 24) || "local";
 }
 
+/**
+ * Converts a value to a string of digits, ensuring minimum length.
+ * @param {string|number} value - The value to convert.
+ * @param {number} minLength - Minimum length of the resulting string.
+ * @returns {string} A string of digits.
+ */
 function toDigits(value, minLength = 6) {
   const digits = String(value || "").replace(/\D/g, "") || "1234567890";
   return digits.repeat(Math.ceil(minLength / digits.length)).slice(0, minLength);
 }
 
+/**
+ * Builds a QA test scenario with sample data for donor, hospital, and blood lab.
+ * @param {string} runId - Identifier for the test run, used to generate unique data.
+ * @returns {object} An object containing donor, hospital, and bloodLab test data.
+ */
 export function buildQaScenario(runId = "local") {
   const slug = toSafeSlug(runId);
   const digits = toDigits(runId, 10);
