@@ -8,6 +8,8 @@
     "test:api": "node ./api/smoke.mjs",
     "test:ui": "playwright test",
     "test:ui:headed": "playwright test --headed",
+    "test:docker": "API_BASE_URL=http://127.0.0.1:3000 FRONTEND_BASE_URL=http://127.0.0.1 QA_ADMIN_EMAIL=suraj@admin.com QA_ADMIN_PASSWORD=bbms@admin npm test",
+    "test:ui:docker": "API_BASE_URL=http://127.0.0.1:3000 FRONTEND_BASE_URL=http://127.0.0.1 QA_ADMIN_EMAIL=suraj@admin.com QA_ADMIN_PASSWORD=bbms@admin playwright test",
     "wait": "node ./scripts/wait-for-http.mjs"
   },
   "devDependencies": {

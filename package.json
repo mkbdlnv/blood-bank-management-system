@@ -1,0 +1,10 @@
+{
+  "name": "blood-bank-management-system",
+  "private": true,
+  "scripts": {
+    "qa:test:docker": "npm --prefix qa run test:docker",
+    "qa:test:ui:docker": "npm --prefix qa run test:ui:docker",
+    "qa:test:api": "npm --prefix backend test",
+    "qa:test:ui": "npm --prefix qa run test:ui"
+  }
+}

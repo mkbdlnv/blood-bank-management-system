@@ -54,6 +54,10 @@ jobs:
         working-directory: qa
         run: npm ci
 
+      - name: Run backend API tests
+        working-directory: backend
+        run: npm test
+
       - name: Install Playwright browser
         working-directory: qa
         run: npx playwright install --with-deps chromium

@@ -26,6 +26,7 @@ export function buildQaScenario(runId = "local") {
       fullName: `QA Donor ${slug}`,
       phone: `9${digits.slice(1)}`,
       emergencyContact: `8${digits.slice(1)}`,
+      dob: "1995-06-15",
       address: {
         street: "123 QA Avenue",
         city: "Mumbai",
