@@ -1,5 +1,13 @@
 import { expect } from "@playwright/test";
 
+/**
+ * Logs in a user with the provided credentials and optionally waits for a specific URL pattern.
+ * @param {Page} page - The Playwright page object.
+ * @param {object} credentials - The login credentials.
+ * @param {string} credentials.email - The user's email.
+ * @param {string} credentials.password - The user's password.
+ * @param {RegExp|string} expectedPathPattern - Optional URL pattern to wait for after login.
+ */
 export async function loginAs(page, { email, password }, expectedPathPattern) {
   await page.goto("/login");
   await expect(page.getByRole("heading", { name: "Login to Blood Bank" })).toBeVisible();
@@ -12,6 +20,11 @@ export async function loginAs(page, { email, password }, expectedPathPattern) {
   }
 }
 
+/**
+ * Registers a new donor by filling out the multi-step registration form.
+ * @param {Page} page - The Playwright page object.
+ * @param {object} donor - The donor data object containing all required fields.
+ */
 export async function registerDonor(page, donor) {
   await page.goto("/register/donor");
   await expect(page.getByRole("heading", { name: "Blood Donor Registration" })).toBeVisible();
