@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "npm run test:api && npm run test:ui",
+    "test": "node ./scripts/run-qa.mjs",
     "test:api": "node ./api/smoke.mjs",
     "test:ui": "playwright test",
     "test:ui:headed": "playwright test --headed",

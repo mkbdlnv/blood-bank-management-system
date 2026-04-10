@@ -21,23 +21,35 @@ test("donor can register through the UI and log in to the dashboard", async ({ p
 
 test("hospital can log in, create a blood request, and see it in request history", async ({ page, scenario }) => {
   await registerApprovedFacility(scenario.hospital);
-  const approvedLab = await registerApprovedFacility(scenario.bloodLab);
+  await registerApprovedFacility(scenario.bloodLab);
 
   await loginAs(page, scenario.hospital, /\/hospital$/);
   await expect(page.getByRole("heading", { name: "Hospital Dashboard" })).toBeVisible();
 
   await page.goto("/hospital/blood-request-create");
   await expect(page.getByRole("heading", { name: "Request Blood" })).toBeVisible();
-  await page.locator("select").first().selectOption(approvedLab._id);
+  await expect(page.locator("select").first()).toContainText(scenario.bloodLab.name);
+  await page.locator("select").first().evaluate((select, labName) => {
+    const option = Array.from(select.options).find((item) => item.textContent?.includes(labName));
+
+    if (!option) {
+      throw new Error(`Blood lab option not found for ${labName}`);
+    }
+
+    select.value = option.value;
+    select.dispatchEvent(new Event("input", { bubbles: true }));
+    select.dispatchEvent(new Event("change", { bubbles: true }));
+  }, scenario.bloodLab.name);
   await page.locator('select').nth(1).selectOption("A+");
   await page.locator('input[type="number"]').fill("3");
   await page.getByRole("button", { name: "Send Blood Request" }).click();
 
   await page.goto("/hospital/blood-request-history");
   await expect(page.getByRole("heading", { name: "Request History" })).toBeVisible();
-  await expect(page.getByText(scenario.bloodLab.name)).toBeVisible();
-  await expect(page.getByText("A+").first()).toBeVisible();
-  await expect(page.getByText("Pending")).toBeVisible();
+  const requestsTable = page.getByRole("table");
+  await expect(requestsTable).toContainText(scenario.bloodLab.name);
+  await expect(requestsTable).toContainText("A+");
+  await expect(requestsTable).toContainText("Pending");
 });
 
 test("blood lab can add stock and process an incoming hospital request", async ({ page, scenario }) => {
