@@ -16,7 +16,10 @@ import {
   waitForHttp,
   writeJson,
 } from "../lib/runtime.mjs";
-import { seedExperimentalData } from "../lib/seedExperimentalData.mjs";
+import {
+  disconnectExperimentalData,
+  seedExperimentalData,
+} from "../lib/seedExperimentalData.mjs";
 
 const artifactDir = path.join(ARTIFACT_ROOT, "chaos");
 const mongoDbPath = path.join(artifactDir, "mongo-data");
@@ -401,6 +404,7 @@ async function main() {
     });
     await writeFile(path.join(artifactDir, "results.md"), createMarkdown(results), "utf8");
   } finally {
+    await disconnectExperimentalData();
     await stopIfRunning(browser ? { stop: () => browser.close() } : null);
     await stopIfRunning(frontend);
     await stopIfRunning(backend);

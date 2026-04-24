@@ -1,0 +1,2527 @@
+{
+  "generatedAt": "2026-04-24T13:40:36.900Z",
+  "profile": "local",
+  "thresholds": {
+    "login": {
+      "load": {
+        "avg": 300,
+        "median": 250,
+        "p95": 500,
+        "errorRate": 0.01
+      },
+      "stress": {
+        "avg": 450,
+        "median": 400,
+        "p95": 800,
+        "errorRate": 0.02
+      },
+      "spike": {
+        "avg": 650,
+        "median": 600,
+        "p95": 1100,
+        "errorRate": 0.03
+      },
+      "endurance": {
+        "avg": 350,
+        "median": 300,
+        "p95": 650,
+        "errorRate": 0.01
+      }
+    },
+    "request": {
+      "load": {
+        "avg": 350,
+        "median": 300,
+        "p95": 650,
+        "errorRate": 0.01
+      },
+      "stress": {
+        "avg": 550,
+        "median": 500,
+        "p95": 950,
+        "errorRate": 0.02
+      },
+      "spike": {
+        "avg": 800,
+        "median": 750,
+        "p95": 1300,
+        "errorRate": 0.03
+      },
+      "endurance": {
+        "avg": 450,
+        "median": 400,
+        "p95": 850,
+        "errorRate": 0.02
+      }
+    },
+    "stock": {
+      "load": {
+        "avg": 320,
+        "median": 280,
+        "p95": 600,
+        "errorRate": 0.01
+      },
+      "stress": {
+        "avg": 500,
+        "median": 450,
+        "p95": 900,
+        "errorRate": 0.02
+      },
+      "spike": {
+        "avg": 750,
+        "median": 700,
+        "p95": 1200,
+        "errorRate": 0.03
+      },
+      "endurance": {
+        "avg": 420,
+        "median": 360,
+        "p95": 750,
+        "errorRate": 0.02
+      }
+    }
+  },
+  "results": [
+    {
+      "target": "login",
+      "targetLabel": "Auth Login",
+      "endpoint": "POST /api/auth/login",
+      "scenario": "load",
+      "avgMs": 2295.2395858585855,
+      "medianMs": 2285.691,
+      "p95Ms": 2932.907399999995,
+      "throughputRps": 4.753994928399794,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:32:02.344Z",
+            "cpuPercent": 98.6,
+            "rssMb": 95.08
+          },
+          {
+            "timestamp": "2026-04-24T13:32:03.345Z",
+            "cpuPercent": 99.3,
+            "rssMb": 97.03
+          },
+          {
+            "timestamp": "2026-04-24T13:32:04.344Z",
+            "cpuPercent": 100,
+            "rssMb": 98.28
+          },
+          {
+            "timestamp": "2026-04-24T13:32:05.347Z",
+            "cpuPercent": 99.7,
+            "rssMb": 98.59
+          },
+          {
+            "timestamp": "2026-04-24T13:32:06.348Z",
+            "cpuPercent": 100,
+            "rssMb": 98.77
+          },
+          {
+            "timestamp": "2026-04-24T13:32:07.348Z",
+            "cpuPercent": 100,
+            "rssMb": 98.88
+          },
+          {
+            "timestamp": "2026-04-24T13:32:08.349Z",
+            "cpuPercent": 100,
+            "rssMb": 100.88
+          },
+          {
+            "timestamp": "2026-04-24T13:32:09.352Z",
+            "cpuPercent": 100,
+            "rssMb": 103.16
+          },
+          {
+            "timestamp": "2026-04-24T13:32:10.352Z",
+            "cpuPercent": 92.6,
+            "rssMb": 103.34
+          },
+          {
+            "timestamp": "2026-04-24T13:32:11.352Z",
+            "cpuPercent": 96.9,
+            "rssMb": 103.56
+          },
+          {
+            "timestamp": "2026-04-24T13:32:12.352Z",
+            "cpuPercent": 99.1,
+            "rssMb": 103.7
+          },
+          {
+            "timestamp": "2026-04-24T13:32:13.353Z",
+            "cpuPercent": 99.7,
+            "rssMb": 104
+          },
+          {
+            "timestamp": "2026-04-24T13:32:14.353Z",
+            "cpuPercent": 100,
+            "rssMb": 104.13
+          },
+          {
+            "timestamp": "2026-04-24T13:32:15.355Z",
+            "cpuPercent": 101.7,
+            "rssMb": 105.72
+          },
+          {
+            "timestamp": "2026-04-24T13:32:16.357Z",
+            "cpuPercent": 100.1,
+            "rssMb": 105.72
+          },
+          {
+            "timestamp": "2026-04-24T13:32:17.359Z",
+            "cpuPercent": 98.1,
+            "rssMb": 105.73
+          },
+          {
+            "timestamp": "2026-04-24T13:32:18.358Z",
+            "cpuPercent": 99.7,
+            "rssMb": 105.75
+          },
+          {
+            "timestamp": "2026-04-24T13:32:19.358Z",
+            "cpuPercent": 99,
+            "rssMb": 105.75
+          },
+          {
+            "timestamp": "2026-04-24T13:32:20.359Z",
+            "cpuPercent": 99,
+            "rssMb": 106.22
+          },
+          {
+            "timestamp": "2026-04-24T13:32:21.360Z",
+            "cpuPercent": 102.4,
+            "rssMb": 111.44
+          },
+          {
+            "timestamp": "2026-04-24T13:32:22.367Z",
+            "cpuPercent": 35.2,
+            "rssMb": 112.23
+          },
+          {
+            "timestamp": "2026-04-24T13:32:22.748Z",
+            "cpuPercent": 8.7,
+            "rssMb": 112.25
+          }
+        ],
+        "avgCpuPercent": 92.26,
+        "maxCpuPercent": 102.4,
+        "avgMemoryMb": 103.65,
+        "maxMemoryMb": 112.25
+      },
+      "thresholds": {
+        "avg": false,
+        "median": false,
+        "p95": false,
+        "errorRate": true,
+        "passed": false
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/login-load/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/login-load/k6.log"
+    },
+    {
+      "target": "login",
+      "targetLabel": "Auth Login",
+      "endpoint": "POST /api/auth/login",
+      "scenario": "stress",
+      "avgMs": 4738.463436170215,
+      "medianMs": 4952.664,
+      "p95Ms": 7282.498149999999,
+      "throughputRps": 4.672702887454496,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:32:32.732Z",
+            "cpuPercent": 30.6,
+            "rssMb": 112.97
+          },
+          {
+            "timestamp": "2026-04-24T13:32:33.728Z",
+            "cpuPercent": 93,
+            "rssMb": 115.91
+          },
+          {
+            "timestamp": "2026-04-24T13:32:34.728Z",
+            "cpuPercent": 98.2,
+            "rssMb": 116.45
+          },
+          {
+            "timestamp": "2026-04-24T13:32:35.731Z",
+            "cpuPercent": 100,
+            "rssMb": 116.47
+          },
+          {
+            "timestamp": "2026-04-24T13:32:36.731Z",
+            "cpuPercent": 99.4,
+            "rssMb": 116.47
+          },
+          {
+            "timestamp": "2026-04-24T13:32:37.732Z",
+            "cpuPercent": 100,
+            "rssMb": 116.48
+          },
+          {
+            "timestamp": "2026-04-24T13:32:38.734Z",
+            "cpuPercent": 100,
+            "rssMb": 116.53
+          },
+          {
+            "timestamp": "2026-04-24T13:32:39.734Z",
+            "cpuPercent": 100,
+            "rssMb": 116.58
+          },
+          {
+            "timestamp": "2026-04-24T13:32:40.736Z",
+            "cpuPercent": 100.9,
+            "rssMb": 116.78
+          },
+          {
+            "timestamp": "2026-04-24T13:32:41.736Z",
+            "cpuPercent": 99,
+            "rssMb": 116.78
+          },
+          {
+            "timestamp": "2026-04-24T13:32:42.737Z",
+            "cpuPercent": 100,
+            "rssMb": 116.78
+          },
+          {
+            "timestamp": "2026-04-24T13:32:43.737Z",
+            "cpuPercent": 99.9,
+            "rssMb": 116.81
+          },
+          {
+            "timestamp": "2026-04-24T13:32:44.740Z",
+            "cpuPercent": 100,
+            "rssMb": 116.83
+          },
+          {
+            "timestamp": "2026-04-24T13:32:45.741Z",
+            "cpuPercent": 98.8,
+            "rssMb": 116.92
+          },
+          {
+            "timestamp": "2026-04-24T13:32:46.741Z",
+            "cpuPercent": 100.1,
+            "rssMb": 116.95
+          },
+          {
+            "timestamp": "2026-04-24T13:32:47.742Z",
+            "cpuPercent": 100.3,
+            "rssMb": 118.63
+          },
+          {
+            "timestamp": "2026-04-24T13:32:48.743Z",
+            "cpuPercent": 100,
+            "rssMb": 118.64
+          },
+          {
+            "timestamp": "2026-04-24T13:32:49.743Z",
+            "cpuPercent": 99.4,
+            "rssMb": 118.64
+          },
+          {
+            "timestamp": "2026-04-24T13:32:50.745Z",
+            "cpuPercent": 99.4,
+            "rssMb": 118.73
+          },
+          {
+            "timestamp": "2026-04-24T13:32:51.746Z",
+            "cpuPercent": 99.7,
+            "rssMb": 118.75
+          },
+          {
+            "timestamp": "2026-04-24T13:32:52.746Z",
+            "cpuPercent": 101.1,
+            "rssMb": 119.3
+          },
+          {
+            "timestamp": "2026-04-24T13:32:53.748Z",
+            "cpuPercent": 100.4,
+            "rssMb": 119.41
+          },
+          {
+            "timestamp": "2026-04-24T13:32:54.750Z",
+            "cpuPercent": 99.7,
+            "rssMb": 119.41
+          },
+          {
+            "timestamp": "2026-04-24T13:32:55.751Z",
+            "cpuPercent": 100,
+            "rssMb": 119.41
+          },
+          {
+            "timestamp": "2026-04-24T13:32:56.752Z",
+            "cpuPercent": 100.1,
+            "rssMb": 119.91
+          },
+          {
+            "timestamp": "2026-04-24T13:32:57.751Z",
+            "cpuPercent": 100,
+            "rssMb": 121.59
+          },
+          {
+            "timestamp": "2026-04-24T13:32:58.754Z",
+            "cpuPercent": 99.4,
+            "rssMb": 121.59
+          },
+          {
+            "timestamp": "2026-04-24T13:32:59.754Z",
+            "cpuPercent": 100.1,
+            "rssMb": 121.61
+          },
+          {
+            "timestamp": "2026-04-24T13:33:00.755Z",
+            "cpuPercent": 100,
+            "rssMb": 121.61
+          },
+          {
+            "timestamp": "2026-04-24T13:33:01.755Z",
+            "cpuPercent": 99.4,
+            "rssMb": 121.61
+          },
+          {
+            "timestamp": "2026-04-24T13:33:02.757Z",
+            "cpuPercent": 100,
+            "rssMb": 121.61
+          },
+          {
+            "timestamp": "2026-04-24T13:33:03.757Z",
+            "cpuPercent": 99.7,
+            "rssMb": 121.61
+          },
+          {
+            "timestamp": "2026-04-24T13:33:04.757Z",
+            "cpuPercent": 100,
+            "rssMb": 121.63
+          },
+          {
+            "timestamp": "2026-04-24T13:33:05.756Z",
+            "cpuPercent": 99.3,
+            "rssMb": 121.64
+          },
+          {
+            "timestamp": "2026-04-24T13:33:06.757Z",
+            "cpuPercent": 100.2,
+            "rssMb": 121.64
+          },
+          {
+            "timestamp": "2026-04-24T13:33:07.758Z",
+            "cpuPercent": 100.1,
+            "rssMb": 121.64
+          },
+          {
+            "timestamp": "2026-04-24T13:33:08.757Z",
+            "cpuPercent": 100,
+            "rssMb": 123.06
+          },
+          {
+            "timestamp": "2026-04-24T13:33:09.756Z",
+            "cpuPercent": 99.8,
+            "rssMb": 123.06
+          },
+          {
+            "timestamp": "2026-04-24T13:33:10.757Z",
+            "cpuPercent": 99.5,
+            "rssMb": 123.08
+          },
+          {
+            "timestamp": "2026-04-24T13:33:11.757Z",
+            "cpuPercent": 75.1,
+            "rssMb": 123.13
+          },
+          {
+            "timestamp": "2026-04-24T13:33:12.513Z",
+            "cpuPercent": 5.7,
+            "rssMb": 123.13
+          }
+        ],
+        "avgCpuPercent": 95.08,
+        "maxCpuPercent": 101.1,
+        "avgMemoryMb": 119.26,
+        "maxMemoryMb": 123.13
+      },
+      "thresholds": {
+        "avg": false,
+        "median": false,
+        "p95": false,
+        "errorRate": true,
+        "passed": false
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/login-stress/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/login-stress/k6.log"
+    },
+    {
+      "target": "login",
+      "targetLabel": "Auth Login",
+      "endpoint": "POST /api/auth/login",
+      "scenario": "spike",
+      "avgMs": 8421.217608108103,
+      "medianMs": 5005.9490000000005,
+      "p95Ms": 22509.17025,
+      "throughputRps": 4.461813493844461,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:33:22.455Z",
+            "cpuPercent": 0,
+            "rssMb": 123.14
+          },
+          {
+            "timestamp": "2026-04-24T13:33:23.451Z",
+            "cpuPercent": 48.8,
+            "rssMb": 124.81
+          },
+          {
+            "timestamp": "2026-04-24T13:33:24.451Z",
+            "cpuPercent": 88.1,
+            "rssMb": 126.16
+          },
+          {
+            "timestamp": "2026-04-24T13:33:25.452Z",
+            "cpuPercent": 70.6,
+            "rssMb": 126.16
+          },
+          {
+            "timestamp": "2026-04-24T13:33:26.453Z",
+            "cpuPercent": 73.4,
+            "rssMb": 126.16
+          },
+          {
+            "timestamp": "2026-04-24T13:33:27.454Z",
+            "cpuPercent": 99.1,
+            "rssMb": 126.16
+          },
+          {
+            "timestamp": "2026-04-24T13:33:28.454Z",
+            "cpuPercent": 95.2,
+            "rssMb": 126.16
+          },
+          {
+            "timestamp": "2026-04-24T13:33:29.455Z",
+            "cpuPercent": 99.2,
+            "rssMb": 126.16
+          },
+          {
+            "timestamp": "2026-04-24T13:33:30.456Z",
+            "cpuPercent": 100,
+            "rssMb": 126.16
+          },
+          {
+            "timestamp": "2026-04-24T13:33:31.456Z",
+            "cpuPercent": 98.1,
+            "rssMb": 126.17
+          },
+          {
+            "timestamp": "2026-04-24T13:33:32.458Z",
+            "cpuPercent": 97.8,
+            "rssMb": 126.17
+          },
+          {
+            "timestamp": "2026-04-24T13:33:33.458Z",
+            "cpuPercent": 99.4,
+            "rssMb": 126.17
+          },
+          {
+            "timestamp": "2026-04-24T13:33:34.459Z",
+            "cpuPercent": 100,
+            "rssMb": 126.17
+          },
+          {
+            "timestamp": "2026-04-24T13:33:35.461Z",
+            "cpuPercent": 100,
+            "rssMb": 126.17
+          },
+          {
+            "timestamp": "2026-04-24T13:33:36.463Z",
+            "cpuPercent": 100.1,
+            "rssMb": 126.17
+          },
+          {
+            "timestamp": "2026-04-24T13:33:37.462Z",
+            "cpuPercent": 100,
+            "rssMb": 126.17
+          },
+          {
+            "timestamp": "2026-04-24T13:33:38.462Z",
+            "cpuPercent": 100,
+            "rssMb": 126.17
+          },
+          {
+            "timestamp": "2026-04-24T13:33:39.462Z",
+            "cpuPercent": 100.3,
+            "rssMb": 126.19
+          },
+          {
+            "timestamp": "2026-04-24T13:33:40.464Z",
+            "cpuPercent": 100,
+            "rssMb": 126.19
+          },
+          {
+            "timestamp": "2026-04-24T13:33:41.463Z",
+            "cpuPercent": 100,
+            "rssMb": 126.22
+          },
+          {
+            "timestamp": "2026-04-24T13:33:42.464Z",
+            "cpuPercent": 100,
+            "rssMb": 126.22
+          },
+          {
+            "timestamp": "2026-04-24T13:33:43.463Z",
+            "cpuPercent": 99,
+            "rssMb": 126.22
+          },
+          {
+            "timestamp": "2026-04-24T13:33:44.463Z",
+            "cpuPercent": 100.4,
+            "rssMb": 126.48
+          },
+          {
+            "timestamp": "2026-04-24T13:33:45.464Z",
+            "cpuPercent": 100,
+            "rssMb": 126.48
+          },
+          {
+            "timestamp": "2026-04-24T13:33:46.464Z",
+            "cpuPercent": 100,
+            "rssMb": 126.48
+          },
+          {
+            "timestamp": "2026-04-24T13:33:47.464Z",
+            "cpuPercent": 99.7,
+            "rssMb": 127.03
+          },
+          {
+            "timestamp": "2026-04-24T13:33:48.463Z",
+            "cpuPercent": 100,
+            "rssMb": 128.98
+          },
+          {
+            "timestamp": "2026-04-24T13:33:49.464Z",
+            "cpuPercent": 100,
+            "rssMb": 128.98
+          },
+          {
+            "timestamp": "2026-04-24T13:33:50.465Z",
+            "cpuPercent": 99.1,
+            "rssMb": 129
+          },
+          {
+            "timestamp": "2026-04-24T13:33:51.464Z",
+            "cpuPercent": 100,
+            "rssMb": 129
+          },
+          {
+            "timestamp": "2026-04-24T13:33:52.465Z",
+            "cpuPercent": 99.1,
+            "rssMb": 129
+          },
+          {
+            "timestamp": "2026-04-24T13:33:53.464Z",
+            "cpuPercent": 101.5,
+            "rssMb": 105.88
+          },
+          {
+            "timestamp": "2026-04-24T13:33:54.465Z",
+            "cpuPercent": 94.5,
+            "rssMb": 106.55
+          },
+          {
+            "timestamp": "2026-04-24T13:33:55.068Z",
+            "cpuPercent": 14.5,
+            "rssMb": 106.55
+          }
+        ],
+        "avgCpuPercent": 90.53,
+        "maxCpuPercent": 101.5,
+        "avgMemoryMb": 124.76,
+        "maxMemoryMb": 129
+      },
+      "thresholds": {
+        "avg": false,
+        "median": false,
+        "p95": false,
+        "errorRate": true,
+        "passed": false
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/login-spike/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/login-spike/k6.log"
+    },
+    {
+      "target": "login",
+      "targetLabel": "Auth Login",
+      "endpoint": "POST /api/auth/login",
+      "scenario": "endurance",
+      "avgMs": 1884.3788064516132,
+      "medianMs": 1977.657,
+      "p95Ms": 2137.8858,
+      "throughputRps": 4.761163161375479,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:34:05.041Z",
+            "cpuPercent": 98.2,
+            "rssMb": 106.72
+          },
+          {
+            "timestamp": "2026-04-24T13:34:06.042Z",
+            "cpuPercent": 99.9,
+            "rssMb": 106.73
+          },
+          {
+            "timestamp": "2026-04-24T13:34:07.044Z",
+            "cpuPercent": 100,
+            "rssMb": 106.73
+          },
+          {
+            "timestamp": "2026-04-24T13:34:08.045Z",
+            "cpuPercent": 99.6,
+            "rssMb": 107.67
+          },
+          {
+            "timestamp": "2026-04-24T13:34:09.046Z",
+            "cpuPercent": 100,
+            "rssMb": 108.53
+          },
+          {
+            "timestamp": "2026-04-24T13:34:10.047Z",
+            "cpuPercent": 99.3,
+            "rssMb": 108.97
+          },
+          {
+            "timestamp": "2026-04-24T13:34:11.048Z",
+            "cpuPercent": 100,
+            "rssMb": 109.17
+          },
+          {
+            "timestamp": "2026-04-24T13:34:12.049Z",
+            "cpuPercent": 100.1,
+            "rssMb": 109.22
+          },
+          {
+            "timestamp": "2026-04-24T13:34:13.050Z",
+            "cpuPercent": 100.1,
+            "rssMb": 109.42
+          },
+          {
+            "timestamp": "2026-04-24T13:34:14.051Z",
+            "cpuPercent": 100,
+            "rssMb": 110.7
+          },
+          {
+            "timestamp": "2026-04-24T13:34:15.052Z",
+            "cpuPercent": 98.2,
+            "rssMb": 113.47
+          },
+          {
+            "timestamp": "2026-04-24T13:34:16.053Z",
+            "cpuPercent": 99.7,
+            "rssMb": 113.7
+          },
+          {
+            "timestamp": "2026-04-24T13:34:17.053Z",
+            "cpuPercent": 100,
+            "rssMb": 113.91
+          },
+          {
+            "timestamp": "2026-04-24T13:34:18.054Z",
+            "cpuPercent": 100,
+            "rssMb": 114
+          },
+          {
+            "timestamp": "2026-04-24T13:34:19.055Z",
+            "cpuPercent": 100.6,
+            "rssMb": 114.2
+          },
+          {
+            "timestamp": "2026-04-24T13:34:20.055Z",
+            "cpuPercent": 99,
+            "rssMb": 114.3
+          },
+          {
+            "timestamp": "2026-04-24T13:34:21.056Z",
+            "cpuPercent": 99.2,
+            "rssMb": 114.47
+          },
+          {
+            "timestamp": "2026-04-24T13:34:22.055Z",
+            "cpuPercent": 98.8,
+            "rssMb": 114.53
+          },
+          {
+            "timestamp": "2026-04-24T13:34:23.056Z",
+            "cpuPercent": 99,
+            "rssMb": 114.69
+          },
+          {
+            "timestamp": "2026-04-24T13:34:24.055Z",
+            "cpuPercent": 100,
+            "rssMb": 114.81
+          },
+          {
+            "timestamp": "2026-04-24T13:34:25.056Z",
+            "cpuPercent": 99.4,
+            "rssMb": 114.89
+          },
+          {
+            "timestamp": "2026-04-24T13:34:26.056Z",
+            "cpuPercent": 100.1,
+            "rssMb": 115.11
+          },
+          {
+            "timestamp": "2026-04-24T13:34:27.056Z",
+            "cpuPercent": 100,
+            "rssMb": 115.17
+          },
+          {
+            "timestamp": "2026-04-24T13:34:28.055Z",
+            "cpuPercent": 101.9,
+            "rssMb": 115.98
+          },
+          {
+            "timestamp": "2026-04-24T13:34:29.056Z",
+            "cpuPercent": 99.7,
+            "rssMb": 117.64
+          },
+          {
+            "timestamp": "2026-04-24T13:34:30.056Z",
+            "cpuPercent": 100,
+            "rssMb": 119.77
+          },
+          {
+            "timestamp": "2026-04-24T13:34:31.056Z",
+            "cpuPercent": 97.3,
+            "rssMb": 121.52
+          },
+          {
+            "timestamp": "2026-04-24T13:34:32.056Z",
+            "cpuPercent": 99.7,
+            "rssMb": 123.52
+          },
+          {
+            "timestamp": "2026-04-24T13:34:33.055Z",
+            "cpuPercent": 99.4,
+            "rssMb": 123.52
+          },
+          {
+            "timestamp": "2026-04-24T13:34:34.056Z",
+            "cpuPercent": 99.5,
+            "rssMb": 123.52
+          },
+          {
+            "timestamp": "2026-04-24T13:34:35.056Z",
+            "cpuPercent": 99.7,
+            "rssMb": 123.52
+          },
+          {
+            "timestamp": "2026-04-24T13:34:36.056Z",
+            "cpuPercent": 100,
+            "rssMb": 123.53
+          },
+          {
+            "timestamp": "2026-04-24T13:34:37.056Z",
+            "cpuPercent": 99.7,
+            "rssMb": 123.55
+          },
+          {
+            "timestamp": "2026-04-24T13:34:38.056Z",
+            "cpuPercent": 100,
+            "rssMb": 123.55
+          },
+          {
+            "timestamp": "2026-04-24T13:34:39.056Z",
+            "cpuPercent": 100.1,
+            "rssMb": 123.55
+          },
+          {
+            "timestamp": "2026-04-24T13:34:40.057Z",
+            "cpuPercent": 100,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:41.057Z",
+            "cpuPercent": 100.3,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:42.057Z",
+            "cpuPercent": 99.4,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:43.057Z",
+            "cpuPercent": 99.6,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:44.057Z",
+            "cpuPercent": 98.7,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:45.057Z",
+            "cpuPercent": 99.1,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:46.057Z",
+            "cpuPercent": 100,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:47.057Z",
+            "cpuPercent": 100.1,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:48.056Z",
+            "cpuPercent": 99.1,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:49.057Z",
+            "cpuPercent": 100,
+            "rssMb": 123.56
+          },
+          {
+            "timestamp": "2026-04-24T13:34:50.063Z",
+            "cpuPercent": 10.8,
+            "rssMb": 123.61
+          },
+          {
+            "timestamp": "2026-04-24T13:34:51.054Z",
+            "cpuPercent": 0.5,
+            "rssMb": 123.61
+          }
+        ],
+        "avgCpuPercent": 95.66,
+        "maxCpuPercent": 101.9,
+        "avgMemoryMb": 117.39,
+        "maxMemoryMb": 123.61
+      },
+      "thresholds": {
+        "avg": false,
+        "median": false,
+        "p95": false,
+        "errorRate": true,
+        "passed": false
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/login-endurance/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/login-endurance/k6.log"
+    },
+    {
+      "target": "request",
+      "targetLabel": "Hospital Blood Request Creation",
+      "endpoint": "POST /api/hospital/blood/request",
+      "scenario": "load",
+      "avgMs": 16.69420215633423,
+      "medianMs": 14.498,
+      "p95Ms": 29.113399999999995,
+      "throughputRps": 54.58211457389048,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:35:00.980Z",
+            "cpuPercent": 32.4,
+            "rssMb": 124.92
+          },
+          {
+            "timestamp": "2026-04-24T13:35:01.978Z",
+            "cpuPercent": 17,
+            "rssMb": 128.13
+          },
+          {
+            "timestamp": "2026-04-24T13:35:02.984Z",
+            "cpuPercent": 22.6,
+            "rssMb": 142.25
+          },
+          {
+            "timestamp": "2026-04-24T13:35:03.985Z",
+            "cpuPercent": 29.1,
+            "rssMb": 146
+          },
+          {
+            "timestamp": "2026-04-24T13:35:04.984Z",
+            "cpuPercent": 27,
+            "rssMb": 147.94
+          },
+          {
+            "timestamp": "2026-04-24T13:35:05.989Z",
+            "cpuPercent": 24.1,
+            "rssMb": 150.13
+          },
+          {
+            "timestamp": "2026-04-24T13:35:06.985Z",
+            "cpuPercent": 41.7,
+            "rssMb": 153.59
+          },
+          {
+            "timestamp": "2026-04-24T13:35:07.990Z",
+            "cpuPercent": 42.2,
+            "rssMb": 154.56
+          },
+          {
+            "timestamp": "2026-04-24T13:35:08.988Z",
+            "cpuPercent": 54.5,
+            "rssMb": 157.75
+          },
+          {
+            "timestamp": "2026-04-24T13:35:09.992Z",
+            "cpuPercent": 34.9,
+            "rssMb": 158.13
+          },
+          {
+            "timestamp": "2026-04-24T13:35:10.991Z",
+            "cpuPercent": 41.8,
+            "rssMb": 158.5
+          },
+          {
+            "timestamp": "2026-04-24T13:35:11.992Z",
+            "cpuPercent": 50.9,
+            "rssMb": 158.5
+          },
+          {
+            "timestamp": "2026-04-24T13:35:12.993Z",
+            "cpuPercent": 37,
+            "rssMb": 158.56
+          },
+          {
+            "timestamp": "2026-04-24T13:35:13.995Z",
+            "cpuPercent": 52.8,
+            "rssMb": 162.77
+          },
+          {
+            "timestamp": "2026-04-24T13:35:14.994Z",
+            "cpuPercent": 59.8,
+            "rssMb": 190.86
+          },
+          {
+            "timestamp": "2026-04-24T13:35:15.994Z",
+            "cpuPercent": 50.6,
+            "rssMb": 191.44
+          },
+          {
+            "timestamp": "2026-04-24T13:35:16.994Z",
+            "cpuPercent": 47.1,
+            "rssMb": 191.45
+          },
+          {
+            "timestamp": "2026-04-24T13:35:17.997Z",
+            "cpuPercent": 53,
+            "rssMb": 191.64
+          },
+          {
+            "timestamp": "2026-04-24T13:35:18.997Z",
+            "cpuPercent": 44.7,
+            "rssMb": 191.88
+          },
+          {
+            "timestamp": "2026-04-24T13:35:19.998Z",
+            "cpuPercent": 45.4,
+            "rssMb": 191.97
+          },
+          {
+            "timestamp": "2026-04-24T13:35:21.004Z",
+            "cpuPercent": 2.5,
+            "rssMb": 191.97
+          },
+          {
+            "timestamp": "2026-04-24T13:35:21.778Z",
+            "cpuPercent": 0.3,
+            "rssMb": 191.97
+          }
+        ],
+        "avgCpuPercent": 36.88,
+        "maxCpuPercent": 59.8,
+        "avgMemoryMb": 165.22,
+        "maxMemoryMb": 191.97
+      },
+      "thresholds": {
+        "avg": true,
+        "median": true,
+        "p95": true,
+        "errorRate": true,
+        "passed": true
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/request-load/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/request-load/k6.log"
+    },
+    {
+      "target": "request",
+      "targetLabel": "Hospital Blood Request Creation",
+      "endpoint": "POST /api/hospital/blood/request",
+      "scenario": "stress",
+      "avgMs": 90.93723484320553,
+      "medianMs": 29.936999999999998,
+      "p95Ms": 304.38644999999997,
+      "throughputRps": 70.95697947560716,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:35:31.717Z",
+            "cpuPercent": 6.4,
+            "rssMb": 114.98
+          },
+          {
+            "timestamp": "2026-04-24T13:35:32.720Z",
+            "cpuPercent": 11.6,
+            "rssMb": 119.5
+          },
+          {
+            "timestamp": "2026-04-24T13:35:33.722Z",
+            "cpuPercent": 23.6,
+            "rssMb": 123.47
+          },
+          {
+            "timestamp": "2026-04-24T13:35:34.721Z",
+            "cpuPercent": 28.6,
+            "rssMb": 127.66
+          },
+          {
+            "timestamp": "2026-04-24T13:35:35.720Z",
+            "cpuPercent": 42.1,
+            "rssMb": 133.38
+          },
+          {
+            "timestamp": "2026-04-24T13:35:36.719Z",
+            "cpuPercent": 41.7,
+            "rssMb": 141.81
+          },
+          {
+            "timestamp": "2026-04-24T13:35:37.719Z",
+            "cpuPercent": 54.1,
+            "rssMb": 156.78
+          },
+          {
+            "timestamp": "2026-04-24T13:35:38.719Z",
+            "cpuPercent": 44.9,
+            "rssMb": 160.73
+          },
+          {
+            "timestamp": "2026-04-24T13:35:39.718Z",
+            "cpuPercent": 34,
+            "rssMb": 162.8
+          },
+          {
+            "timestamp": "2026-04-24T13:35:40.721Z",
+            "cpuPercent": 47.1,
+            "rssMb": 165.64
+          },
+          {
+            "timestamp": "2026-04-24T13:35:41.719Z",
+            "cpuPercent": 57.8,
+            "rssMb": 170.64
+          },
+          {
+            "timestamp": "2026-04-24T13:35:42.720Z",
+            "cpuPercent": 48,
+            "rssMb": 170.67
+          },
+          {
+            "timestamp": "2026-04-24T13:35:43.722Z",
+            "cpuPercent": 49.9,
+            "rssMb": 170.7
+          },
+          {
+            "timestamp": "2026-04-24T13:35:44.722Z",
+            "cpuPercent": 60.5,
+            "rssMb": 170.72
+          },
+          {
+            "timestamp": "2026-04-24T13:35:45.724Z",
+            "cpuPercent": 66,
+            "rssMb": 177.66
+          },
+          {
+            "timestamp": "2026-04-24T13:35:46.724Z",
+            "cpuPercent": 74.4,
+            "rssMb": 179.91
+          },
+          {
+            "timestamp": "2026-04-24T13:35:47.726Z",
+            "cpuPercent": 95.2,
+            "rssMb": 184.02
+          },
+          {
+            "timestamp": "2026-04-24T13:35:48.726Z",
+            "cpuPercent": 115.6,
+            "rssMb": 258.38
+          },
+          {
+            "timestamp": "2026-04-24T13:35:49.726Z",
+            "cpuPercent": 120.6,
+            "rssMb": 281.86
+          },
+          {
+            "timestamp": "2026-04-24T13:35:50.728Z",
+            "cpuPercent": 135.6,
+            "rssMb": 284.16
+          },
+          {
+            "timestamp": "2026-04-24T13:35:51.731Z",
+            "cpuPercent": 139,
+            "rssMb": 310.33
+          },
+          {
+            "timestamp": "2026-04-24T13:35:52.730Z",
+            "cpuPercent": 134.1,
+            "rssMb": 333.83
+          },
+          {
+            "timestamp": "2026-04-24T13:35:53.731Z",
+            "cpuPercent": 140.3,
+            "rssMb": 385.16
+          },
+          {
+            "timestamp": "2026-04-24T13:35:54.732Z",
+            "cpuPercent": 141.3,
+            "rssMb": 387.08
+          },
+          {
+            "timestamp": "2026-04-24T13:35:55.733Z",
+            "cpuPercent": 139.3,
+            "rssMb": 404.66
+          },
+          {
+            "timestamp": "2026-04-24T13:35:56.734Z",
+            "cpuPercent": 139.7,
+            "rssMb": 405.8
+          },
+          {
+            "timestamp": "2026-04-24T13:35:57.735Z",
+            "cpuPercent": 140.5,
+            "rssMb": 409.63
+          },
+          {
+            "timestamp": "2026-04-24T13:35:58.737Z",
+            "cpuPercent": 136.7,
+            "rssMb": 421.66
+          },
+          {
+            "timestamp": "2026-04-24T13:35:59.736Z",
+            "cpuPercent": 142.4,
+            "rssMb": 421.78
+          },
+          {
+            "timestamp": "2026-04-24T13:36:00.737Z",
+            "cpuPercent": 148,
+            "rssMb": 473.86
+          },
+          {
+            "timestamp": "2026-04-24T13:36:01.738Z",
+            "cpuPercent": 141,
+            "rssMb": 474.27
+          },
+          {
+            "timestamp": "2026-04-24T13:36:02.738Z",
+            "cpuPercent": 141,
+            "rssMb": 475.34
+          },
+          {
+            "timestamp": "2026-04-24T13:36:03.739Z",
+            "cpuPercent": 134.8,
+            "rssMb": 489.55
+          },
+          {
+            "timestamp": "2026-04-24T13:36:04.739Z",
+            "cpuPercent": 135.8,
+            "rssMb": 491.19
+          },
+          {
+            "timestamp": "2026-04-24T13:36:05.740Z",
+            "cpuPercent": 146.5,
+            "rssMb": 491.72
+          },
+          {
+            "timestamp": "2026-04-24T13:36:06.741Z",
+            "cpuPercent": 139.5,
+            "rssMb": 491.73
+          },
+          {
+            "timestamp": "2026-04-24T13:36:07.743Z",
+            "cpuPercent": 132.1,
+            "rssMb": 492.23
+          },
+          {
+            "timestamp": "2026-04-24T13:36:08.742Z",
+            "cpuPercent": 90.1,
+            "rssMb": 492.23
+          },
+          {
+            "timestamp": "2026-04-24T13:36:09.742Z",
+            "cpuPercent": 59.8,
+            "rssMb": 492.23
+          },
+          {
+            "timestamp": "2026-04-24T13:36:10.742Z",
+            "cpuPercent": 43.7,
+            "rssMb": 492.28
+          },
+          {
+            "timestamp": "2026-04-24T13:36:11.748Z",
+            "cpuPercent": 2.3,
+            "rssMb": 492.28
+          },
+          {
+            "timestamp": "2026-04-24T13:36:12.747Z",
+            "cpuPercent": 0.2,
+            "rssMb": 492.28
+          },
+          {
+            "timestamp": "2026-04-24T13:36:13.750Z",
+            "cpuPercent": 1.5,
+            "rssMb": 492.28
+          },
+          {
+            "timestamp": "2026-04-24T13:36:14.202Z",
+            "cpuPercent": 0.8,
+            "rssMb": 492.28
+          }
+        ],
+        "avgCpuPercent": 84.73,
+        "maxCpuPercent": 148,
+        "avgMemoryMb": 324.12,
+        "maxMemoryMb": 492.28
+      },
+      "thresholds": {
+        "avg": true,
+        "median": true,
+        "p95": true,
+        "errorRate": true,
+        "passed": true
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/request-stress/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/request-stress/k6.log"
+    },
+    {
+      "target": "request",
+      "targetLabel": "Hospital Blood Request Creation",
+      "endpoint": "POST /api/hospital/blood/request",
+      "scenario": "spike",
+      "avgMs": 211.56086740088088,
+      "medianMs": 188.025,
+      "p95Ms": 548.8829,
+      "throughputRps": 89.71586984021603,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:36:24.129Z",
+            "cpuPercent": 4.6,
+            "rssMb": 149.25
+          },
+          {
+            "timestamp": "2026-04-24T13:36:25.129Z",
+            "cpuPercent": 9,
+            "rssMb": 150.64
+          },
+          {
+            "timestamp": "2026-04-24T13:36:26.132Z",
+            "cpuPercent": 11.5,
+            "rssMb": 150.95
+          },
+          {
+            "timestamp": "2026-04-24T13:36:27.131Z",
+            "cpuPercent": 19.8,
+            "rssMb": 152.09
+          },
+          {
+            "timestamp": "2026-04-24T13:36:28.132Z",
+            "cpuPercent": 19.5,
+            "rssMb": 152.5
+          },
+          {
+            "timestamp": "2026-04-24T13:36:29.130Z",
+            "cpuPercent": 38.6,
+            "rssMb": 158.25
+          },
+          {
+            "timestamp": "2026-04-24T13:36:30.131Z",
+            "cpuPercent": 44.7,
+            "rssMb": 167.11
+          },
+          {
+            "timestamp": "2026-04-24T13:36:31.131Z",
+            "cpuPercent": 53.2,
+            "rssMb": 185.31
+          },
+          {
+            "timestamp": "2026-04-24T13:36:32.131Z",
+            "cpuPercent": 72.3,
+            "rssMb": 189.38
+          },
+          {
+            "timestamp": "2026-04-24T13:36:33.132Z",
+            "cpuPercent": 136.9,
+            "rssMb": 306.64
+          },
+          {
+            "timestamp": "2026-04-24T13:36:34.133Z",
+            "cpuPercent": 140.9,
+            "rssMb": 343.34
+          },
+          {
+            "timestamp": "2026-04-24T13:36:35.135Z",
+            "cpuPercent": 133.1,
+            "rssMb": 413.81
+          },
+          {
+            "timestamp": "2026-04-24T13:36:36.135Z",
+            "cpuPercent": 143.7,
+            "rssMb": 436.36
+          },
+          {
+            "timestamp": "2026-04-24T13:36:37.136Z",
+            "cpuPercent": 141.3,
+            "rssMb": 438.31
+          },
+          {
+            "timestamp": "2026-04-24T13:36:38.138Z",
+            "cpuPercent": 139.8,
+            "rssMb": 475.88
+          },
+          {
+            "timestamp": "2026-04-24T13:36:39.138Z",
+            "cpuPercent": 141.7,
+            "rssMb": 475.94
+          },
+          {
+            "timestamp": "2026-04-24T13:36:40.139Z",
+            "cpuPercent": 141.8,
+            "rssMb": 476.86
+          },
+          {
+            "timestamp": "2026-04-24T13:36:41.139Z",
+            "cpuPercent": 145,
+            "rssMb": 504.61
+          },
+          {
+            "timestamp": "2026-04-24T13:36:42.141Z",
+            "cpuPercent": 134.5,
+            "rssMb": 505.14
+          },
+          {
+            "timestamp": "2026-04-24T13:36:43.140Z",
+            "cpuPercent": 140.1,
+            "rssMb": 564.55
+          },
+          {
+            "timestamp": "2026-04-24T13:36:44.141Z",
+            "cpuPercent": 130.4,
+            "rssMb": 564.84
+          },
+          {
+            "timestamp": "2026-04-24T13:36:45.142Z",
+            "cpuPercent": 135.8,
+            "rssMb": 565.22
+          },
+          {
+            "timestamp": "2026-04-24T13:36:46.143Z",
+            "cpuPercent": 139.1,
+            "rssMb": 565.23
+          },
+          {
+            "timestamp": "2026-04-24T13:36:47.145Z",
+            "cpuPercent": 136.8,
+            "rssMb": 565.23
+          },
+          {
+            "timestamp": "2026-04-24T13:36:48.146Z",
+            "cpuPercent": 67.5,
+            "rssMb": 565.25
+          },
+          {
+            "timestamp": "2026-04-24T13:36:48.873Z",
+            "cpuPercent": 7.4,
+            "rssMb": 565.25
+          }
+        ],
+        "avgCpuPercent": 93.42,
+        "maxCpuPercent": 145,
+        "avgMemoryMb": 376.46,
+        "maxMemoryMb": 565.25
+      },
+      "thresholds": {
+        "avg": true,
+        "median": true,
+        "p95": true,
+        "errorRate": true,
+        "passed": true
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/request-spike/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/request-spike/k6.log"
+    },
+    {
+      "target": "request",
+      "targetLabel": "Hospital Blood Request Creation",
+      "endpoint": "POST /api/hospital/blood/request",
+      "scenario": "endurance",
+      "avgMs": 17.956105466860215,
+      "medianMs": 16.8,
+      "p95Ms": 30.665199999999995,
+      "throughputRps": 45.49583426979109,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:36:58.811Z",
+            "cpuPercent": 35.7,
+            "rssMb": 164.48
+          },
+          {
+            "timestamp": "2026-04-24T13:36:59.809Z",
+            "cpuPercent": 24.3,
+            "rssMb": 172.98
+          },
+          {
+            "timestamp": "2026-04-24T13:37:00.819Z",
+            "cpuPercent": 28.2,
+            "rssMb": 185.89
+          },
+          {
+            "timestamp": "2026-04-24T13:37:01.815Z",
+            "cpuPercent": 25.7,
+            "rssMb": 188.95
+          },
+          {
+            "timestamp": "2026-04-24T13:37:02.811Z",
+            "cpuPercent": 22.5,
+            "rssMb": 193.77
+          },
+          {
+            "timestamp": "2026-04-24T13:37:03.815Z",
+            "cpuPercent": 31.4,
+            "rssMb": 195.89
+          },
+          {
+            "timestamp": "2026-04-24T13:37:04.815Z",
+            "cpuPercent": 24.2,
+            "rssMb": 196.75
+          },
+          {
+            "timestamp": "2026-04-24T13:37:05.815Z",
+            "cpuPercent": 22.7,
+            "rssMb": 198.06
+          },
+          {
+            "timestamp": "2026-04-24T13:37:06.820Z",
+            "cpuPercent": 38.8,
+            "rssMb": 198.23
+          },
+          {
+            "timestamp": "2026-04-24T13:37:07.816Z",
+            "cpuPercent": 28.2,
+            "rssMb": 199.77
+          },
+          {
+            "timestamp": "2026-04-24T13:37:08.818Z",
+            "cpuPercent": 32.3,
+            "rssMb": 202.72
+          },
+          {
+            "timestamp": "2026-04-24T13:37:09.817Z",
+            "cpuPercent": 35.5,
+            "rssMb": 202.89
+          },
+          {
+            "timestamp": "2026-04-24T13:37:10.818Z",
+            "cpuPercent": 38.2,
+            "rssMb": 202.89
+          },
+          {
+            "timestamp": "2026-04-24T13:37:11.817Z",
+            "cpuPercent": 44.9,
+            "rssMb": 202.98
+          },
+          {
+            "timestamp": "2026-04-24T13:37:12.818Z",
+            "cpuPercent": 35.1,
+            "rssMb": 203.19
+          },
+          {
+            "timestamp": "2026-04-24T13:37:13.819Z",
+            "cpuPercent": 47.1,
+            "rssMb": 205.08
+          },
+          {
+            "timestamp": "2026-04-24T13:37:14.817Z",
+            "cpuPercent": 52,
+            "rssMb": 206.55
+          },
+          {
+            "timestamp": "2026-04-24T13:37:15.819Z",
+            "cpuPercent": 50.2,
+            "rssMb": 226.5
+          },
+          {
+            "timestamp": "2026-04-24T13:37:16.817Z",
+            "cpuPercent": 31,
+            "rssMb": 235.48
+          },
+          {
+            "timestamp": "2026-04-24T13:37:17.819Z",
+            "cpuPercent": 55.9,
+            "rssMb": 246.66
+          },
+          {
+            "timestamp": "2026-04-24T13:37:18.818Z",
+            "cpuPercent": 41.4,
+            "rssMb": 246.73
+          },
+          {
+            "timestamp": "2026-04-24T13:37:19.817Z",
+            "cpuPercent": 38.8,
+            "rssMb": 246.73
+          },
+          {
+            "timestamp": "2026-04-24T13:37:20.817Z",
+            "cpuPercent": 43.7,
+            "rssMb": 246.73
+          },
+          {
+            "timestamp": "2026-04-24T13:37:21.816Z",
+            "cpuPercent": 40.7,
+            "rssMb": 246.73
+          },
+          {
+            "timestamp": "2026-04-24T13:37:22.816Z",
+            "cpuPercent": 42.8,
+            "rssMb": 246.75
+          },
+          {
+            "timestamp": "2026-04-24T13:37:23.816Z",
+            "cpuPercent": 51.7,
+            "rssMb": 246.75
+          },
+          {
+            "timestamp": "2026-04-24T13:37:24.817Z",
+            "cpuPercent": 47.6,
+            "rssMb": 246.75
+          },
+          {
+            "timestamp": "2026-04-24T13:37:25.816Z",
+            "cpuPercent": 48.2,
+            "rssMb": 246.77
+          },
+          {
+            "timestamp": "2026-04-24T13:37:26.817Z",
+            "cpuPercent": 52.7,
+            "rssMb": 246.77
+          },
+          {
+            "timestamp": "2026-04-24T13:37:27.818Z",
+            "cpuPercent": 58.4,
+            "rssMb": 246.77
+          },
+          {
+            "timestamp": "2026-04-24T13:37:28.817Z",
+            "cpuPercent": 56.4,
+            "rssMb": 246.77
+          },
+          {
+            "timestamp": "2026-04-24T13:37:29.817Z",
+            "cpuPercent": 56.4,
+            "rssMb": 246.77
+          },
+          {
+            "timestamp": "2026-04-24T13:37:30.817Z",
+            "cpuPercent": 56,
+            "rssMb": 254.52
+          },
+          {
+            "timestamp": "2026-04-24T13:37:31.817Z",
+            "cpuPercent": 65,
+            "rssMb": 308.27
+          },
+          {
+            "timestamp": "2026-04-24T13:37:32.817Z",
+            "cpuPercent": 70.1,
+            "rssMb": 308.27
+          },
+          {
+            "timestamp": "2026-04-24T13:37:33.817Z",
+            "cpuPercent": 57.3,
+            "rssMb": 308.48
+          },
+          {
+            "timestamp": "2026-04-24T13:37:34.818Z",
+            "cpuPercent": 53.6,
+            "rssMb": 308.48
+          },
+          {
+            "timestamp": "2026-04-24T13:37:35.817Z",
+            "cpuPercent": 67.2,
+            "rssMb": 308.48
+          },
+          {
+            "timestamp": "2026-04-24T13:37:36.816Z",
+            "cpuPercent": 55.1,
+            "rssMb": 308.48
+          },
+          {
+            "timestamp": "2026-04-24T13:37:37.817Z",
+            "cpuPercent": 62.6,
+            "rssMb": 308.48
+          },
+          {
+            "timestamp": "2026-04-24T13:37:38.818Z",
+            "cpuPercent": 58.1,
+            "rssMb": 308.48
+          },
+          {
+            "timestamp": "2026-04-24T13:37:39.817Z",
+            "cpuPercent": 72.7,
+            "rssMb": 308.48
+          },
+          {
+            "timestamp": "2026-04-24T13:37:40.818Z",
+            "cpuPercent": 84.1,
+            "rssMb": 317.98
+          },
+          {
+            "timestamp": "2026-04-24T13:37:41.818Z",
+            "cpuPercent": 71.3,
+            "rssMb": 317.98
+          },
+          {
+            "timestamp": "2026-04-24T13:37:42.817Z",
+            "cpuPercent": 71.2,
+            "rssMb": 317.98
+          },
+          {
+            "timestamp": "2026-04-24T13:37:43.829Z",
+            "cpuPercent": 4,
+            "rssMb": 317.98
+          },
+          {
+            "timestamp": "2026-04-24T13:37:44.664Z",
+            "cpuPercent": 0.4,
+            "rssMb": 317.98
+          }
+        ],
+        "avgCpuPercent": 45.35,
+        "maxCpuPercent": 84.1,
+        "avgMemoryMb": 247.04,
+        "maxMemoryMb": 317.98
+      },
+      "thresholds": {
+        "avg": true,
+        "median": true,
+        "p95": true,
+        "errorRate": true,
+        "passed": true
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/request-endurance/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/request-endurance/k6.log"
+    },
+    {
+      "target": "stock",
+      "targetLabel": "Blood Stock Update",
+      "endpoint": "POST /api/blood-lab/blood/add",
+      "scenario": "load",
+      "avgMs": 17.376120938628176,
+      "medianMs": 16.064,
+      "p95Ms": 29.4001,
+      "throughputRps": 54.24361296144278,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:37:54.575Z",
+            "cpuPercent": 39.7,
+            "rssMb": 169.28
+          },
+          {
+            "timestamp": "2026-04-24T13:37:55.580Z",
+            "cpuPercent": 41.6,
+            "rssMb": 178.72
+          },
+          {
+            "timestamp": "2026-04-24T13:37:56.577Z",
+            "cpuPercent": 32,
+            "rssMb": 195.17
+          },
+          {
+            "timestamp": "2026-04-24T13:37:57.575Z",
+            "cpuPercent": 29.8,
+            "rssMb": 198.48
+          },
+          {
+            "timestamp": "2026-04-24T13:37:58.581Z",
+            "cpuPercent": 29,
+            "rssMb": 198.91
+          },
+          {
+            "timestamp": "2026-04-24T13:37:59.578Z",
+            "cpuPercent": 38.3,
+            "rssMb": 199.75
+          },
+          {
+            "timestamp": "2026-04-24T13:38:00.583Z",
+            "cpuPercent": 32.1,
+            "rssMb": 201.27
+          },
+          {
+            "timestamp": "2026-04-24T13:38:01.581Z",
+            "cpuPercent": 51.2,
+            "rssMb": 205.2
+          },
+          {
+            "timestamp": "2026-04-24T13:38:02.583Z",
+            "cpuPercent": 40.4,
+            "rssMb": 205.41
+          },
+          {
+            "timestamp": "2026-04-24T13:38:03.584Z",
+            "cpuPercent": 38.5,
+            "rssMb": 205.52
+          },
+          {
+            "timestamp": "2026-04-24T13:38:04.582Z",
+            "cpuPercent": 49.4,
+            "rssMb": 208.33
+          },
+          {
+            "timestamp": "2026-04-24T13:38:05.584Z",
+            "cpuPercent": 42.7,
+            "rssMb": 208.34
+          },
+          {
+            "timestamp": "2026-04-24T13:38:06.585Z",
+            "cpuPercent": 42.3,
+            "rssMb": 208.34
+          },
+          {
+            "timestamp": "2026-04-24T13:38:07.585Z",
+            "cpuPercent": 48.2,
+            "rssMb": 218.17
+          },
+          {
+            "timestamp": "2026-04-24T13:38:08.587Z",
+            "cpuPercent": 54.2,
+            "rssMb": 218.64
+          },
+          {
+            "timestamp": "2026-04-24T13:38:09.587Z",
+            "cpuPercent": 52.6,
+            "rssMb": 218.66
+          },
+          {
+            "timestamp": "2026-04-24T13:38:10.587Z",
+            "cpuPercent": 40.2,
+            "rssMb": 219.94
+          },
+          {
+            "timestamp": "2026-04-24T13:38:11.590Z",
+            "cpuPercent": 55.3,
+            "rssMb": 220.41
+          },
+          {
+            "timestamp": "2026-04-24T13:38:12.590Z",
+            "cpuPercent": 49.3,
+            "rssMb": 220.72
+          },
+          {
+            "timestamp": "2026-04-24T13:38:13.591Z",
+            "cpuPercent": 45.9,
+            "rssMb": 223.42
+          },
+          {
+            "timestamp": "2026-04-24T13:38:14.597Z",
+            "cpuPercent": 3,
+            "rssMb": 223.42
+          },
+          {
+            "timestamp": "2026-04-24T13:38:15.460Z",
+            "cpuPercent": 0.3,
+            "rssMb": 223.42
+          }
+        ],
+        "avgCpuPercent": 38.91,
+        "maxCpuPercent": 55.3,
+        "avgMemoryMb": 207.71,
+        "maxMemoryMb": 223.42
+      },
+      "thresholds": {
+        "avg": true,
+        "median": true,
+        "p95": true,
+        "errorRate": true,
+        "passed": true
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/stock-load/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/stock-load/k6.log"
+    },
+    {
+      "target": "stock",
+      "targetLabel": "Blood Stock Update",
+      "endpoint": "POST /api/blood-lab/blood/add",
+      "scenario": "stress",
+      "avgMs": 85.87181575342463,
+      "medianMs": 27.426499999999997,
+      "p95Ms": 287.10715000000005,
+      "throughputRps": 72.59200209661613,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:38:25.165Z",
+            "cpuPercent": 7.4,
+            "rssMb": 161.53
+          },
+          {
+            "timestamp": "2026-04-24T13:38:26.167Z",
+            "cpuPercent": 19.8,
+            "rssMb": 163.63
+          },
+          {
+            "timestamp": "2026-04-24T13:38:27.167Z",
+            "cpuPercent": 21,
+            "rssMb": 166.47
+          },
+          {
+            "timestamp": "2026-04-24T13:38:28.168Z",
+            "cpuPercent": 22.7,
+            "rssMb": 169.97
+          },
+          {
+            "timestamp": "2026-04-24T13:38:29.168Z",
+            "cpuPercent": 32,
+            "rssMb": 172.61
+          },
+          {
+            "timestamp": "2026-04-24T13:38:30.169Z",
+            "cpuPercent": 36.1,
+            "rssMb": 180.63
+          },
+          {
+            "timestamp": "2026-04-24T13:38:31.168Z",
+            "cpuPercent": 48.5,
+            "rssMb": 194.75
+          },
+          {
+            "timestamp": "2026-04-24T13:38:32.168Z",
+            "cpuPercent": 32.4,
+            "rssMb": 196.16
+          },
+          {
+            "timestamp": "2026-04-24T13:38:33.169Z",
+            "cpuPercent": 46.6,
+            "rssMb": 199.17
+          },
+          {
+            "timestamp": "2026-04-24T13:38:34.169Z",
+            "cpuPercent": 62.9,
+            "rssMb": 202.31
+          },
+          {
+            "timestamp": "2026-04-24T13:38:35.168Z",
+            "cpuPercent": 44.7,
+            "rssMb": 206.2
+          },
+          {
+            "timestamp": "2026-04-24T13:38:36.170Z",
+            "cpuPercent": 43.4,
+            "rssMb": 206.2
+          },
+          {
+            "timestamp": "2026-04-24T13:38:37.171Z",
+            "cpuPercent": 70,
+            "rssMb": 209.95
+          },
+          {
+            "timestamp": "2026-04-24T13:38:38.171Z",
+            "cpuPercent": 71.9,
+            "rssMb": 216.72
+          },
+          {
+            "timestamp": "2026-04-24T13:38:39.171Z",
+            "cpuPercent": 62,
+            "rssMb": 242.7
+          },
+          {
+            "timestamp": "2026-04-24T13:38:40.171Z",
+            "cpuPercent": 72.4,
+            "rssMb": 286.08
+          },
+          {
+            "timestamp": "2026-04-24T13:38:41.171Z",
+            "cpuPercent": 89.6,
+            "rssMb": 305.98
+          },
+          {
+            "timestamp": "2026-04-24T13:38:42.171Z",
+            "cpuPercent": 106.1,
+            "rssMb": 317.2
+          },
+          {
+            "timestamp": "2026-04-24T13:38:43.171Z",
+            "cpuPercent": 123.2,
+            "rssMb": 317.2
+          },
+          {
+            "timestamp": "2026-04-24T13:38:44.171Z",
+            "cpuPercent": 141.8,
+            "rssMb": 318.45
+          },
+          {
+            "timestamp": "2026-04-24T13:38:45.171Z",
+            "cpuPercent": 147,
+            "rssMb": 344.7
+          },
+          {
+            "timestamp": "2026-04-24T13:38:46.171Z",
+            "cpuPercent": 144.3,
+            "rssMb": 397.63
+          },
+          {
+            "timestamp": "2026-04-24T13:38:47.170Z",
+            "cpuPercent": 142.6,
+            "rssMb": 397.7
+          },
+          {
+            "timestamp": "2026-04-24T13:38:48.171Z",
+            "cpuPercent": 144.7,
+            "rssMb": 397.7
+          },
+          {
+            "timestamp": "2026-04-24T13:38:49.171Z",
+            "cpuPercent": 141.2,
+            "rssMb": 406.48
+          },
+          {
+            "timestamp": "2026-04-24T13:38:50.171Z",
+            "cpuPercent": 144.9,
+            "rssMb": 443.48
+          },
+          {
+            "timestamp": "2026-04-24T13:38:51.171Z",
+            "cpuPercent": 144.8,
+            "rssMb": 443.48
+          },
+          {
+            "timestamp": "2026-04-24T13:38:52.171Z",
+            "cpuPercent": 140.9,
+            "rssMb": 443.48
+          },
+          {
+            "timestamp": "2026-04-24T13:38:53.171Z",
+            "cpuPercent": 141.9,
+            "rssMb": 482.5
+          },
+          {
+            "timestamp": "2026-04-24T13:38:54.172Z",
+            "cpuPercent": 148.1,
+            "rssMb": 482.5
+          },
+          {
+            "timestamp": "2026-04-24T13:38:55.171Z",
+            "cpuPercent": 140.7,
+            "rssMb": 482.5
+          },
+          {
+            "timestamp": "2026-04-24T13:38:56.171Z",
+            "cpuPercent": 141.3,
+            "rssMb": 482.5
+          },
+          {
+            "timestamp": "2026-04-24T13:38:57.171Z",
+            "cpuPercent": 136.2,
+            "rssMb": 482.5
+          },
+          {
+            "timestamp": "2026-04-24T13:38:58.171Z",
+            "cpuPercent": 147.3,
+            "rssMb": 482.5
+          },
+          {
+            "timestamp": "2026-04-24T13:38:59.171Z",
+            "cpuPercent": 141.4,
+            "rssMb": 482.5
+          },
+          {
+            "timestamp": "2026-04-24T13:39:00.171Z",
+            "cpuPercent": 142.7,
+            "rssMb": 482.5
+          },
+          {
+            "timestamp": "2026-04-24T13:39:01.171Z",
+            "cpuPercent": 128.9,
+            "rssMb": 482.5
+          },
+          {
+            "timestamp": "2026-04-24T13:39:02.171Z",
+            "cpuPercent": 101.3,
+            "rssMb": 482.52
+          },
+          {
+            "timestamp": "2026-04-24T13:39:03.173Z",
+            "cpuPercent": 78,
+            "rssMb": 482.52
+          },
+          {
+            "timestamp": "2026-04-24T13:39:04.175Z",
+            "cpuPercent": 32.7,
+            "rssMb": 482.52
+          },
+          {
+            "timestamp": "2026-04-24T13:39:04.818Z",
+            "cpuPercent": 5.7,
+            "rssMb": 482.52
+          }
+        ],
+        "avgCpuPercent": 92.47,
+        "maxCpuPercent": 148.1,
+        "avgMemoryMb": 341,
+        "maxMemoryMb": 482.52
+      },
+      "thresholds": {
+        "avg": true,
+        "median": true,
+        "p95": true,
+        "errorRate": true,
+        "passed": true
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/stock-stress/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/stock-stress/k6.log"
+    },
+    {
+      "target": "stock",
+      "targetLabel": "Blood Stock Update",
+      "endpoint": "POST /api/blood-lab/blood/add",
+      "scenario": "spike",
+      "avgMs": 204.90044805194825,
+      "medianMs": 179.1565,
+      "p95Ms": 534.3341999999999,
+      "throughputRps": 91.13815218224978,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:39:14.717Z",
+            "cpuPercent": 4,
+            "rssMb": 165.22
+          },
+          {
+            "timestamp": "2026-04-24T13:39:15.718Z",
+            "cpuPercent": 5.2,
+            "rssMb": 165.91
+          },
+          {
+            "timestamp": "2026-04-24T13:39:16.719Z",
+            "cpuPercent": 8.6,
+            "rssMb": 166.09
+          },
+          {
+            "timestamp": "2026-04-24T13:39:17.721Z",
+            "cpuPercent": 25.4,
+            "rssMb": 168.03
+          },
+          {
+            "timestamp": "2026-04-24T13:39:18.722Z",
+            "cpuPercent": 17.4,
+            "rssMb": 168.47
+          },
+          {
+            "timestamp": "2026-04-24T13:39:19.721Z",
+            "cpuPercent": 34.7,
+            "rssMb": 173.17
+          },
+          {
+            "timestamp": "2026-04-24T13:39:20.720Z",
+            "cpuPercent": 46.8,
+            "rssMb": 181.58
+          },
+          {
+            "timestamp": "2026-04-24T13:39:21.720Z",
+            "cpuPercent": 51.9,
+            "rssMb": 197.67
+          },
+          {
+            "timestamp": "2026-04-24T13:39:22.720Z",
+            "cpuPercent": 71.6,
+            "rssMb": 201.83
+          },
+          {
+            "timestamp": "2026-04-24T13:39:23.720Z",
+            "cpuPercent": 136.4,
+            "rssMb": 310.11
+          },
+          {
+            "timestamp": "2026-04-24T13:39:24.720Z",
+            "cpuPercent": 149.2,
+            "rssMb": 380.45
+          },
+          {
+            "timestamp": "2026-04-24T13:39:25.721Z",
+            "cpuPercent": 139.9,
+            "rssMb": 406.72
+          },
+          {
+            "timestamp": "2026-04-24T13:39:26.721Z",
+            "cpuPercent": 137,
+            "rssMb": 444.72
+          },
+          {
+            "timestamp": "2026-04-24T13:39:27.723Z",
+            "cpuPercent": 143.3,
+            "rssMb": 445.45
+          },
+          {
+            "timestamp": "2026-04-24T13:39:28.722Z",
+            "cpuPercent": 147.8,
+            "rssMb": 499.45
+          },
+          {
+            "timestamp": "2026-04-24T13:39:29.724Z",
+            "cpuPercent": 142.4,
+            "rssMb": 499.47
+          },
+          {
+            "timestamp": "2026-04-24T13:39:30.726Z",
+            "cpuPercent": 142.6,
+            "rssMb": 542.02
+          },
+          {
+            "timestamp": "2026-04-24T13:39:31.726Z",
+            "cpuPercent": 139.8,
+            "rssMb": 542.19
+          },
+          {
+            "timestamp": "2026-04-24T13:39:32.725Z",
+            "cpuPercent": 140.5,
+            "rssMb": 533.39
+          },
+          {
+            "timestamp": "2026-04-24T13:39:33.726Z",
+            "cpuPercent": 152.7,
+            "rssMb": 643
+          },
+          {
+            "timestamp": "2026-04-24T13:39:34.725Z",
+            "cpuPercent": 138.8,
+            "rssMb": 643.38
+          },
+          {
+            "timestamp": "2026-04-24T13:39:35.725Z",
+            "cpuPercent": 146.2,
+            "rssMb": 643.47
+          },
+          {
+            "timestamp": "2026-04-24T13:39:36.726Z",
+            "cpuPercent": 140.3,
+            "rssMb": 643.47
+          },
+          {
+            "timestamp": "2026-04-24T13:39:37.726Z",
+            "cpuPercent": 138.6,
+            "rssMb": 643.8
+          },
+          {
+            "timestamp": "2026-04-24T13:39:38.727Z",
+            "cpuPercent": 64.2,
+            "rssMb": 643.81
+          },
+          {
+            "timestamp": "2026-04-24T13:39:39.511Z",
+            "cpuPercent": 6.5,
+            "rssMb": 643.81
+          }
+        ],
+        "avgCpuPercent": 95.07,
+        "maxCpuPercent": 152.7,
+        "avgMemoryMb": 411.41,
+        "maxMemoryMb": 643.81
+      },
+      "thresholds": {
+        "avg": true,
+        "median": true,
+        "p95": true,
+        "errorRate": true,
+        "passed": true
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/stock-spike/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/stock-spike/k6.log"
+    },
+    {
+      "target": "stock",
+      "targetLabel": "Blood Stock Update",
+      "endpoint": "POST /api/blood-lab/blood/add",
+      "scenario": "endurance",
+      "avgMs": 20.092089887640455,
+      "medianMs": 19.027,
+      "p95Ms": 31.097299999999994,
+      "throughputRps": 45.05519558599069,
+      "errorRate": 0,
+      "cpu": {
+        "samples": [
+          {
+            "timestamp": "2026-04-24T13:39:49.429Z",
+            "cpuPercent": 26.3,
+            "rssMb": 172.36
+          },
+          {
+            "timestamp": "2026-04-24T13:39:50.428Z",
+            "cpuPercent": 31.4,
+            "rssMb": 181.61
+          },
+          {
+            "timestamp": "2026-04-24T13:39:51.429Z",
+            "cpuPercent": 32.2,
+            "rssMb": 193
+          },
+          {
+            "timestamp": "2026-04-24T13:39:52.428Z",
+            "cpuPercent": 14.1,
+            "rssMb": 194.83
+          },
+          {
+            "timestamp": "2026-04-24T13:39:53.433Z",
+            "cpuPercent": 29.8,
+            "rssMb": 196.73
+          },
+          {
+            "timestamp": "2026-04-24T13:39:54.431Z",
+            "cpuPercent": 37.2,
+            "rssMb": 197.59
+          },
+          {
+            "timestamp": "2026-04-24T13:39:55.433Z",
+            "cpuPercent": 20.4,
+            "rssMb": 197.61
+          },
+          {
+            "timestamp": "2026-04-24T13:39:56.432Z",
+            "cpuPercent": 28.9,
+            "rssMb": 197.77
+          },
+          {
+            "timestamp": "2026-04-24T13:39:57.434Z",
+            "cpuPercent": 26.9,
+            "rssMb": 204.3
+          },
+          {
+            "timestamp": "2026-04-24T13:39:58.434Z",
+            "cpuPercent": 36.2,
+            "rssMb": 205.67
+          },
+          {
+            "timestamp": "2026-04-24T13:39:59.438Z",
+            "cpuPercent": 26.4,
+            "rssMb": 206.39
+          },
+          {
+            "timestamp": "2026-04-24T13:40:00.435Z",
+            "cpuPercent": 37.7,
+            "rssMb": 206.42
+          },
+          {
+            "timestamp": "2026-04-24T13:40:01.436Z",
+            "cpuPercent": 43.4,
+            "rssMb": 206.42
+          },
+          {
+            "timestamp": "2026-04-24T13:40:02.439Z",
+            "cpuPercent": 40.2,
+            "rssMb": 206.44
+          },
+          {
+            "timestamp": "2026-04-24T13:40:03.437Z",
+            "cpuPercent": 28.7,
+            "rssMb": 209.86
+          },
+          {
+            "timestamp": "2026-04-24T13:40:04.439Z",
+            "cpuPercent": 44.3,
+            "rssMb": 218.42
+          },
+          {
+            "timestamp": "2026-04-24T13:40:05.442Z",
+            "cpuPercent": 55.6,
+            "rssMb": 234.45
+          },
+          {
+            "timestamp": "2026-04-24T13:40:06.441Z",
+            "cpuPercent": 56.7,
+            "rssMb": 234.5
+          },
+          {
+            "timestamp": "2026-04-24T13:40:07.442Z",
+            "cpuPercent": 39.6,
+            "rssMb": 254.72
+          },
+          {
+            "timestamp": "2026-04-24T13:40:08.443Z",
+            "cpuPercent": 46.8,
+            "rssMb": 303.11
+          },
+          {
+            "timestamp": "2026-04-24T13:40:09.441Z",
+            "cpuPercent": 36.9,
+            "rssMb": 304.02
+          },
+          {
+            "timestamp": "2026-04-24T13:40:10.444Z",
+            "cpuPercent": 54.9,
+            "rssMb": 304.03
+          },
+          {
+            "timestamp": "2026-04-24T13:40:11.443Z",
+            "cpuPercent": 42,
+            "rssMb": 304.03
+          },
+          {
+            "timestamp": "2026-04-24T13:40:12.446Z",
+            "cpuPercent": 46.8,
+            "rssMb": 304.03
+          },
+          {
+            "timestamp": "2026-04-24T13:40:13.446Z",
+            "cpuPercent": 57.7,
+            "rssMb": 304.03
+          },
+          {
+            "timestamp": "2026-04-24T13:40:14.446Z",
+            "cpuPercent": 44.2,
+            "rssMb": 304.05
+          },
+          {
+            "timestamp": "2026-04-24T13:40:15.448Z",
+            "cpuPercent": 58.8,
+            "rssMb": 304.05
+          },
+          {
+            "timestamp": "2026-04-24T13:40:16.448Z",
+            "cpuPercent": 50.6,
+            "rssMb": 304.05
+          },
+          {
+            "timestamp": "2026-04-24T13:40:17.449Z",
+            "cpuPercent": 46.3,
+            "rssMb": 304.05
+          },
+          {
+            "timestamp": "2026-04-24T13:40:18.450Z",
+            "cpuPercent": 65.8,
+            "rssMb": 304.05
+          },
+          {
+            "timestamp": "2026-04-24T13:40:19.451Z",
+            "cpuPercent": 53.5,
+            "rssMb": 304.05
+          },
+          {
+            "timestamp": "2026-04-24T13:40:20.450Z",
+            "cpuPercent": 46,
+            "rssMb": 310.56
+          },
+          {
+            "timestamp": "2026-04-24T13:40:21.452Z",
+            "cpuPercent": 70.2,
+            "rssMb": 310.61
+          },
+          {
+            "timestamp": "2026-04-24T13:40:22.451Z",
+            "cpuPercent": 50.2,
+            "rssMb": 340.61
+          },
+          {
+            "timestamp": "2026-04-24T13:40:23.451Z",
+            "cpuPercent": 67.6,
+            "rssMb": 340.64
+          },
+          {
+            "timestamp": "2026-04-24T13:40:24.452Z",
+            "cpuPercent": 57.5,
+            "rssMb": 340.66
+          },
+          {
+            "timestamp": "2026-04-24T13:40:25.452Z",
+            "cpuPercent": 52.1,
+            "rssMb": 340.83
+          },
+          {
+            "timestamp": "2026-04-24T13:40:26.451Z",
+            "cpuPercent": 52.9,
+            "rssMb": 340.83
+          },
+          {
+            "timestamp": "2026-04-24T13:40:27.453Z",
+            "cpuPercent": 81,
+            "rssMb": 340.84
+          },
+          {
+            "timestamp": "2026-04-24T13:40:28.452Z",
+            "cpuPercent": 61.4,
+            "rssMb": 340.88
+          },
+          {
+            "timestamp": "2026-04-24T13:40:29.452Z",
+            "cpuPercent": 75,
+            "rssMb": 340.88
+          },
+          {
+            "timestamp": "2026-04-24T13:40:30.452Z",
+            "cpuPercent": 61.9,
+            "rssMb": 340.88
+          },
+          {
+            "timestamp": "2026-04-24T13:40:31.452Z",
+            "cpuPercent": 74.6,
+            "rssMb": 340.88
+          },
+          {
+            "timestamp": "2026-04-24T13:40:32.453Z",
+            "cpuPercent": 73.9,
+            "rssMb": 340.88
+          },
+          {
+            "timestamp": "2026-04-24T13:40:33.453Z",
+            "cpuPercent": 68,
+            "rssMb": 340.88
+          },
+          {
+            "timestamp": "2026-04-24T13:40:34.458Z",
+            "cpuPercent": 7.3,
+            "rssMb": 340.88
+          },
+          {
+            "timestamp": "2026-04-24T13:40:35.456Z",
+            "cpuPercent": 0.2,
+            "rssMb": 340.88
+          },
+          {
+            "timestamp": "2026-04-24T13:40:36.458Z",
+            "cpuPercent": 0.1,
+            "rssMb": 340.88
+          },
+          {
+            "timestamp": "2026-04-24T13:40:36.898Z",
+            "cpuPercent": 0.1,
+            "rssMb": 340.88
+          }
+        ],
+        "avgCpuPercent": 44.09,
+        "maxCpuPercent": 81,
+        "avgMemoryMb": 278.39,
+        "maxMemoryMb": 340.88
+      },
+      "thresholds": {
+        "avg": true,
+        "median": true,
+        "p95": true,
+        "errorRate": true,
+        "passed": true
+      },
+      "summaryPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/stock-endurance/summary.json",
+      "logPath": "/Users/medetkabdulinov/Desktop/Study/AQA/ass1/blood-bank-management-system/qa/artifacts/experimental/performance/stock-endurance/k6.log"
+    }
+  ]
+}

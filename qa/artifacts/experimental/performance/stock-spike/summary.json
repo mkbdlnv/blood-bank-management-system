@@ -1,0 +1,154 @@
+{
+    "metrics": {
+        "vus": {
+            "value": 5,
+            "min": 0,
+            "max": 60
+        },
+        "checks": {
+            "passes": 2310,
+            "fails": 0,
+            "value": 1
+        },
+        "http_reqs": {
+            "count": 2310,
+            "rate": 91.13815218224978
+        },
+        "iteration_duration": {
+            "p(95)": 734.6447417999999,
+            "avg": 405.3877017016016,
+            "min": 203.466875,
+            "med": 379.672292,
+            "max": 1008.589583,
+            "p(90)": 679.7617334
+        },
+        "http_req_receiving": {
+            "min": 0.005,
+            "med": 0.015,
+            "max": 0.258,
+            "p(90)": 0.027,
+            "p(95)": 0.036,
+            "avg": 0.018151515151515217
+        },
+        "http_req_duration": {
+            "max": 807.843,
+            "p(90)": 479.2994,
+            "p(95)": 534.3341999999999,
+            "avg": 204.90044805194825,
+            "min": 3.036,
+            "med": 179.1565,
+            "thresholds": {
+                "avg<750": false,
+                "med<700": false,
+                "p(95)<1200": false
+            }
+        },
+        "vus_max": {
+            "value": 60,
+            "min": 60,
+            "max": 60
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 2310,
+            "thresholds": {
+                "rate<0.03": false
+            },
+            "value": 0
+        },
+        "http_req_blocked": {
+            "p(95)": 0.009,
+            "avg": 0.008567099567099648,
+            "min": 0,
+            "med": 0.001,
+            "max": 0.566,
+            "p(90)": 0.004
+        },
+        "http_req_tls_handshaking": {
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0
+        },
+        "http_req_duration{expected_response:true}": {
+            "avg": 204.90044805194825,
+            "min": 3.036,
+            "med": 179.1565,
+            "max": 807.843,
+            "p(90)": 479.2994,
+            "p(95)": 534.3341999999999
+        },
+        "data_received": {
+            "count": 1361042,
+            "rate": 53698.20472832624
+        },
+        "data_sent": {
+            "count": 917426,
+            "rate": 36195.89194976307
+        },
+        "iterations": {
+            "count": 2309,
+            "rate": 91.09869843671635
+        },
+        "http_req_waiting": {
+            "min": 3.022,
+            "med": 179.137,
+            "max": 807.804,
+            "p(90)": 479.2832,
+            "p(95)": 534.3098,
+            "avg": 204.87343290043324
+        },
+        "http_req_connecting": {
+            "avg": 0.005429004329004332,
+            "min": 0,
+            "med": 0,
+            "max": 0.45,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_req_sending": {
+            "avg": 0.00886363636363643,
+            "min": 0.002,
+            "med": 0.006,
+            "max": 0.178,
+            "p(90)": 0.016,
+            "p(95)": 0.023549999999999897
+        }
+    },
+    "setup_data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZWI3Mjc5YzU5Y2I2OWNmZjdlNjZjMiIsInJvbGUiOiJibG9vZC1sYWIiLCJpYXQiOjE3NzcwMzc5NTMsImV4cCI6MTc3NzY0Mjc1M30.gEDtMkGZgAWzMF3JuBBWPDji61RPgN6A-2CwrmLmmuQ"
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "setup": {
+                "groups": {},
+                "checks": {
+                        "login status is 200": {
+                            "id": "bb27b460b057923f4a083e3603c038b9",
+                            "passes": 1,
+                            "fails": 0,
+                            "name": "login status is 200",
+                            "path": "::setup::login status is 200"
+                        }
+                    },
+                "name": "setup",
+                "path": "::setup",
+                "id": "5c0f8025f7e0b6654089e5b00e950f1a"
+            }
+        },
+        "checks": {
+            "stock update status is 200": {
+                "name": "stock update status is 200",
+                "path": "::stock update status is 200",
+                "id": "38768f48e2c64219184e3ab7a0b80737",
+                "passes": 2309,
+                "fails": 0
+            }
+        }
+    }
+}

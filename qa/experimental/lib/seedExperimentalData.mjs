@@ -151,3 +151,11 @@ export async function seedExperimentalData(mongoUri) {
     })),
   };
 }
+
+export async function disconnectExperimentalData() {
+  const mongoose = Facility.db.base;
+
+  if (mongoose.connection.readyState !== 0) {
+    await mongoose.disconnect();
+  }
+}

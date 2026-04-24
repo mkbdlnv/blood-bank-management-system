@@ -15,7 +15,10 @@ import {
   stopIfRunning,
   writeJson,
 } from "../lib/runtime.mjs";
-import { seedExperimentalData } from "../lib/seedExperimentalData.mjs";
+import {
+  disconnectExperimentalData,
+  seedExperimentalData,
+} from "../lib/seedExperimentalData.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -252,6 +255,7 @@ async function main() {
     });
     await writeFile(path.join(artifactDir, "results.md"), createMarkdown(results), "utf8");
   } finally {
+    await disconnectExperimentalData();
     await stopIfRunning(backend);
     await stopIfRunning(mongo);
   }
