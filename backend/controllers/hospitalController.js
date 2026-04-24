@@ -54,7 +54,17 @@ export const hospitalRequestBlood = async (req, res) => {
       units
     });
 
-    await Promise.resolve();
+    // Add to hospital history
+    await Facility.findByIdAndUpdate(hospitalId, {
+      $push: {
+        history: {
+          eventType: "Stock Update",
+          description: `Requested ${units} units of ${bloodType} from ${lab.name}`,
+          date: new Date(),
+          referenceId: request._id,
+        },
+      },
+    });
 
     res.status(201).json({
       success: true,

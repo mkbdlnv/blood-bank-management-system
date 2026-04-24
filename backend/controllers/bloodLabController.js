@@ -350,7 +350,7 @@ export const addBloodStock = async (req, res) => {
     const { bloodType, quantity } = req.body;
     const bloodLab = req.user._id;
 
-    if (!bloodType || !quantity || quantity <= 0) {
+    if (!bloodType && !quantity && quantity <= 0) {
       return res.status(400).json({
         success: false,
         message: "Please provide valid bloodType and quantity",
