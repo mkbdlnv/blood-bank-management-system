@@ -155,7 +155,12 @@ function createMarkdown(results) {
 async function main() {
   await cleanDir(artifactDir);
 
-  const mongo = await startMongo({ port: 27027, dbName: "bbms_performance" });
+  const mongo = process.env.EXPERIMENTAL_MONGO_URI
+    ? {
+        mongoUri: process.env.EXPERIMENTAL_MONGO_URI,
+        async stop() {},
+      }
+    : await startMongo({ port: 27027, dbName: "bbms_performance" });
   let backend;
 
   try {
@@ -170,6 +175,7 @@ async function main() {
 
     for (const target of targets.filter((item) => !requestedTargets.length || requestedTargets.includes(item.id))) {
       for (const scenarioId of ["load", "stress", "spike", "endurance"].filter((item) => !requestedScenarios.length || requestedScenarios.includes(item))) {
+        console.log(`[performance] Starting ${target.id}/${scenarioId} (${profile} profile)`);
         const runId = `${target.id}-${scenarioId}`;
         const runDir = await ensureDir(path.join(artifactDir, runId));
         const summaryPath = path.join(runDir, "summary.json");
@@ -232,6 +238,9 @@ async function main() {
 
         result.thresholds = evaluateThreshold(result, target.id, scenarioId);
         results.push(result);
+        console.log(
+          `[performance] Finished ${target.id}/${scenarioId}: avg=${result.avgMs.toFixed(2)}ms p95=${result.p95Ms.toFixed(2)}ms errors=${(result.errorRate * 100).toFixed(2)}%`
+        );
       }
     }
 

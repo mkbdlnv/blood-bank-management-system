@@ -307,6 +307,7 @@ async function main() {
   const results = [];
 
   for (const mutant of mutants) {
+    console.log(`[mutation] Running ${mutant.id} against ${mutant.file}`);
     const absoluteFile = path.resolve(REPO_ROOT, mutant.file);
     const originalSource = await readFile(absoluteFile, "utf8");
     const mutatedSource = applyReplacement(originalSource, mutant.replacement);
@@ -333,6 +334,7 @@ async function main() {
       };
 
       results.push(result);
+      console.log(`[mutation] ${mutant.id} => ${status}`);
       await writeJson(path.join(mutantDir, "result.json"), {
         mutant,
         status,

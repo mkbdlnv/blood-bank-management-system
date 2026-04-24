@@ -3,9 +3,17 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 
 let mongoServer;
 const TEST_MONGO_PORT = Number(process.env.TEST_MONGO_PORT || 27027);
+const TEST_MONGO_URI = process.env.TEST_MONGO_URI;
 
 export async function connectTestDatabase() {
   if (mongoose.connection.readyState === 1) {
+    return;
+  }
+
+  if (TEST_MONGO_URI) {
+    process.env.MONGO_URI = TEST_MONGO_URI;
+    await mongoose.connect(process.env.MONGO_URI);
+    await clearTestDatabase();
     return;
   }
 
