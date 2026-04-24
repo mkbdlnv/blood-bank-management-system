@@ -30,5 +30,9 @@ dist-ssr
 qa/node_modules
 qa/playwright-report
 qa/test-results
+qa/artifacts/experimental/
 backend.log
 frontend.log
+
+# Local scratch artifacts
+test-results/

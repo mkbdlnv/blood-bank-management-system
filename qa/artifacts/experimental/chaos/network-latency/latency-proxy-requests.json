@@ -3,24 +3,24 @@
     "path": "/api/auth/profile",
     "method": "GET",
     "delayedByMs": 1500,
-    "startedAt": "2026-04-24T11:37:09.389Z"
+    "startedAt": "2026-04-24T13:53:32.461Z"
   },
   {
     "path": "/api/auth/profile",
     "method": "GET",
     "delayedByMs": 1500,
-    "startedAt": "2026-04-24T11:37:10.904Z"
+    "startedAt": "2026-04-24T13:53:33.982Z"
   },
   {
     "path": "/api/facility/labs",
     "method": "GET",
     "delayedByMs": 1500,
-    "startedAt": "2026-04-24T11:37:10.918Z"
+    "startedAt": "2026-04-24T13:53:33.998Z"
   },
   {
     "path": "/api/facility/labs",
     "method": "GET",
     "delayedByMs": 1500,
-    "startedAt": "2026-04-24T11:37:12.426Z"
+    "startedAt": "2026-04-24T13:53:35.508Z"
   }
 ]

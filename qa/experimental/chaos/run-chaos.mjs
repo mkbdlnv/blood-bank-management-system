@@ -129,6 +129,7 @@ async function openAuthenticatedPage(page, { frontendUrl, token, role, route }) 
 }
 
 async function runApiDowntimeScenario(context) {
+  console.log("[chaos] Starting API downtime");
   const scenarioDir = await ensureDir(path.join(artifactDir, "api-downtime"));
   const page = await context.browser.newPage();
 
@@ -182,6 +183,7 @@ async function runApiDowntimeScenario(context) {
 }
 
 async function runDatabaseFailureScenario(context) {
+  console.log("[chaos] Starting Database failure");
   const scenarioDir = await ensureDir(path.join(artifactDir, "database-failure"));
   const page = await context.browser.newPage();
 
@@ -265,6 +267,7 @@ async function runDatabaseFailureScenario(context) {
 }
 
 async function runLatencyScenario(context) {
+  console.log("[chaos] Starting Injected network latency");
   const scenarioDir = await ensureDir(path.join(artifactDir, "network-latency"));
   const proxyPort = 5054;
   const delayedFrontendPort = 5175;
@@ -395,14 +398,18 @@ async function main() {
 
     const results = [];
     results.push(await runApiDowntimeScenario(sharedContext));
+    console.log("[chaos] Finished API downtime");
     results.push(await runDatabaseFailureScenario(sharedContext));
+    console.log("[chaos] Finished Database failure");
     results.push(await runLatencyScenario(sharedContext));
+    console.log("[chaos] Finished Injected network latency");
 
     await writeJson(path.join(artifactDir, "results.json"), {
       generatedAt: nowIso(),
       results,
     });
     await writeFile(path.join(artifactDir, "results.md"), createMarkdown(results), "utf8");
+    console.log("[chaos] Results written");
   } finally {
     await disconnectExperimentalData();
     await stopIfRunning(browser ? { stop: () => browser.close() } : null);
@@ -412,7 +419,11 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+main()
+  .then(() => {
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
