@@ -1,0 +1,19 @@
+{
+  "mutant": {
+    "id": "HOSP-CONST-003",
+    "module": "Hospital Blood Request Workflow",
+    "type": "Constant alteration",
+    "file": "backend/controllers/hospitalController.js",
+    "description": "Only pending labs are treated as valid request targets.",
+    "replacement": {
+      "find": "      status: \"approved\" ",
+      "replace": "      status: \"pending\" "
+    },
+    "missingTest": "Covered by approved/pending lab request tests."
+  },
+  "status": "Killed",
+  "exitCode": 1,
+  "signal": null,
+  "stdout": "\n> backend@1.0.0 test\n> NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand\n\n",
+  "stderr": "(node:28727) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nFAIL tests/api/hospital.test.js (5.832 s)\n  ● Console\n\n    console.log\n      [dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }\n\n      at _log (node_modules/dotenv/lib/main.js:142:11)\n\n  ● Hospital API › POST /api/hospital/blood/request creates a blood request for an approved lab\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: 201\n    Received: 404\n\n      31 |       });\n      32 |\n    > 33 |     expect(response.status).toBe(201);\n         |                             ^\n      34 |     expect(response.body.success).toBe(true);\n      35 |     expect(response.body.data).toMatchObject({\n      36 |       hospitalId: hospital._id.toString(),\n\n      at Object.toBe (tests/api/hospital.test.js:33:29)\n\n  ● Hospital API › POST /api/hospital/blood/request rejects requests to unapproved labs\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: 404\n    Received: 201\n\n      92 |       });\n      93 |\n    > 94 |     expect(response.status).toBe(404);\n         |                             ^\n      95 |     expect(response.body.message).toBe(\"Blood lab not found or not approved\");\n      96 |   });\n      97 |\n\n      at Object.toBe (tests/api/hospital.test.js:94:29)\n\n  ● Hospital API › GET /api/hospital/blood/requests returns the hospital request history\n\n    expect(received).toHaveLength(expected)\n\n    Expected length: 1\n    Received length: 0\n    Received array:  []\n\n      136 |     expect(response.status).toBe(200);\n      137 |     expect(response.body.success).toBe(true);\n    > 138 |     expect(response.body.data).toHaveLength(1);\n          |                                ^\n      139 |     expect(response.body.data[0]).toMatchObject({\n      140 |       bloodType: \"AB+\",\n      141 |       units: 4,\n\n      at Object.toHaveLength (tests/api/hospital.test.js:138:32)\n\n\nTest Suites: 1 failed, 3 passed, 4 total\nTests:       3 failed, 1 todo, 38 passed, 42 total\nSnapshots:   0 total\nTime:        21.186 s, estimated 22 s\nRan all test suites.\n"
+}

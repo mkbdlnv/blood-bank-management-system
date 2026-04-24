@@ -1,0 +1,19 @@
+{
+  "mutant": {
+    "id": "LAB-LOGIC-001",
+    "module": "Blood Stock & Inventory Management",
+    "type": "Logical operator change",
+    "file": "backend/controllers/bloodLabController.js",
+    "description": "Allow invalid stock payloads through add validation.",
+    "replacement": {
+      "find": "if (!bloodType || !quantity || quantity <= 0) {",
+      "replace": "if (!bloodType && !quantity && quantity <= 0) {"
+    },
+    "missingTest": "Covered by add-stock validation tests."
+  },
+  "status": "Survived",
+  "exitCode": 0,
+  "signal": null,
+  "stdout": "\n> backend@1.0.0 test\n> NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand\n\n",
+  "stderr": "(node:28849) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nTest Suites: 4 passed, 4 total\nTests:       1 todo, 41 passed, 42 total\nSnapshots:   0 total\nTime:        21.207 s, estimated 22 s\nRan all test suites.\n"
+}

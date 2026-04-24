@@ -1,0 +1,19 @@
+{
+  "mutant": {
+    "id": "ADMIN-LOGIC-002",
+    "module": "Facility Registration & Admin Approval",
+    "type": "Logical operator change",
+    "file": "backend/controllers/adminController.js",
+    "description": "Reject requests that already include a rejection reason.",
+    "replacement": {
+      "find": "if (!rejectionReason) return res.status(400).json({ message: \"Rejection reason is required.\" });",
+      "replace": "if (rejectionReason) return res.status(400).json({ message: \"Rejection reason is required.\" });"
+    },
+    "missingTest": "Covered by reject-path validation tests."
+  },
+  "status": "Killed",
+  "exitCode": 1,
+  "signal": null,
+  "stdout": "\n> backend@1.0.0 test\n> NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand\n\n",
+  "stderr": "(node:28418) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nFAIL tests/api/admin.test.js\n  ● Console\n\n    console.log\n      [dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }\n\n      at _log (node_modules/dotenv/lib/main.js:142:11)\n\n  ● Admin Facility Approval API › PUT /api/admin/facility/reject/:id rejects a facility and stores the reason\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: 200\n    Received: 400\n\n      85 |     const updatedFacility = await Facility.findById(facility._id);\n      86 |\n    > 87 |     expect(response.status).toBe(200);\n         |                             ^\n      88 |     expect(response.body.message).toBe(\"Facility rejected and status updated\");\n      89 |     expect(updatedFacility.status).toBe(\"rejected\");\n      90 |     expect(updatedFacility.rejectionReason).toBe(\"Incomplete registration documents\");\n\n      at Object.toBe (tests/api/admin.test.js:87:29)\n\n  ● Admin Facility Approval API › PUT /api/admin/facility/reject/:id requires a rejection reason\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: 400\n    Received: 200\n\n      103 |       .send({});\n      104 |\n    > 105 |     expect(response.status).toBe(400);\n          |                             ^\n      106 |     expect(response.body.message).toBe(\"Rejection reason is required.\");\n      107 |   });\n      108 |\n\n      at Object.toBe (tests/api/admin.test.js:105:29)\n\n\nTest Suites: 1 failed, 3 passed, 4 total\nTests:       2 failed, 1 todo, 39 passed, 42 total\nSnapshots:   0 total\nTime:        21.346 s, estimated 22 s\nRan all test suites.\n"
+}

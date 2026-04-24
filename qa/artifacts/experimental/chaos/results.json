@@ -1,0 +1,640 @@
+{
+  "generatedAt": "2026-04-24T11:37:17.892Z",
+  "results": [
+    {
+      "scenario": "API downtime",
+      "injectedAt": "2026-04-24T11:36:28.889Z",
+      "frontendObservation": "Hospital request page stayed mounted, surfaced the 'Failed to load blood labs' toast, and recovered after the API returned. Availability and MTTR are derived from backend stop/start timestamps plus the captured UI evidence.",
+      "totalSamples": 36,
+      "successCount": 36,
+      "failureCount": 0,
+      "availabilityPercent": 19.64,
+      "mttrMs": 14126,
+      "firstFailure": {
+        "timestamp": "2026-04-24T11:36:28.893Z",
+        "message": "Derived from backend SIGTERM log entry."
+      },
+      "firstRecovery": {
+        "timestamp": "2026-04-24T11:36:43.015Z",
+        "message": "Derived from backend restart log entry."
+      },
+      "avgLatencyMs": 1.83,
+      "samples": [
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:28.888Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:29.391Z",
+          "elapsedMs": 3,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:29.894Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:30.398Z",
+          "elapsedMs": 4,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:30.902Z",
+          "elapsedMs": 3,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:31.404Z",
+          "elapsedMs": 3,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:31.907Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:32.409Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:32.910Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:33.412Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:33.915Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:34.417Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:34.919Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:35.419Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:35.922Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:36.424Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:36.926Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:37.428Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:37.930Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:38.433Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:38.934Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:39.436Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:39.938Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:40.439Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:40.941Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:41.443Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:41.945Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:42.448Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:42.949Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:43.451Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:43.952Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:44.454Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:44.956Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:45.458Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:45.959Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "api-downtime",
+          "timestamp": "2026-04-24T11:36:46.461Z",
+          "elapsedMs": 1,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        }
+      ]
+    },
+    {
+      "scenario": "Database failure",
+      "injectedAt": "2026-04-24T11:36:48.496Z",
+      "frontendObservation": "The blood stock page showed a toast during the outage and resumed normal reads after MongoDB returned.",
+      "recoveryMode": "automatic",
+      "totalSamples": 17,
+      "successCount": 12,
+      "failureCount": 5,
+      "availabilityPercent": 70.59,
+      "mttrMs": 12507,
+      "firstFailure": {
+        "label": "database-failure",
+        "timestamp": "2026-04-24T11:36:48.496Z",
+        "elapsedMs": 2003,
+        "ok": false,
+        "status": 0,
+        "message": "timeout"
+      },
+      "firstRecovery": {
+        "label": "database-failure",
+        "timestamp": "2026-04-24T11:37:01.003Z",
+        "elapsedMs": 1150,
+        "ok": true,
+        "status": 200,
+        "message": "OK"
+      },
+      "avgLatencyMs": 659.47,
+      "samples": [
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:36:48.496Z",
+          "elapsedMs": 2003,
+          "ok": false,
+          "status": 0,
+          "message": "timeout"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:36:50.999Z",
+          "elapsedMs": 2000,
+          "ok": false,
+          "status": 0,
+          "message": "timeout"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:36:53.499Z",
+          "elapsedMs": 2002,
+          "ok": false,
+          "status": 0,
+          "message": "timeout"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:36:56.001Z",
+          "elapsedMs": 2001,
+          "ok": false,
+          "status": 0,
+          "message": "timeout"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:36:58.501Z",
+          "elapsedMs": 2002,
+          "ok": false,
+          "status": 0,
+          "message": "timeout"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:01.003Z",
+          "elapsedMs": 1150,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:02.653Z",
+          "elapsedMs": 6,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:03.158Z",
+          "elapsedMs": 4,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:03.663Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:04.167Z",
+          "elapsedMs": 3,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:04.669Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:05.174Z",
+          "elapsedMs": 4,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:05.678Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:06.184Z",
+          "elapsedMs": 4,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:06.688Z",
+          "elapsedMs": 6,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:07.195Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "database-failure",
+          "timestamp": "2026-04-24T11:37:07.700Z",
+          "elapsedMs": 6,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        }
+      ]
+    },
+    {
+      "scenario": "Injected network latency",
+      "injectedAt": "2026-04-24T11:37:08.780Z",
+      "frontendObservation": "The hospital request page remained functional under the delayed proxy, but the first data-bearing render slowed noticeably.",
+      "pageLoadMs": 5677,
+      "totalSamples": 18,
+      "successCount": 18,
+      "failureCount": 0,
+      "availabilityPercent": 100,
+      "mttrMs": 0,
+      "firstFailure": null,
+      "firstRecovery": null,
+      "avgLatencyMs": 5.17,
+      "samples": [
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:08.779Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:09.283Z",
+          "elapsedMs": 2,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:09.786Z",
+          "elapsedMs": 6,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:10.292Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:10.797Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:11.302Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:11.807Z",
+          "elapsedMs": 4,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:12.310Z",
+          "elapsedMs": 7,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:12.816Z",
+          "elapsedMs": 6,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:13.321Z",
+          "elapsedMs": 4,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:13.826Z",
+          "elapsedMs": 6,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:14.332Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:14.837Z",
+          "elapsedMs": 6,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:15.342Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:15.847Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:16.352Z",
+          "elapsedMs": 6,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:16.857Z",
+          "elapsedMs": 5,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        },
+        {
+          "label": "network-latency",
+          "timestamp": "2026-04-24T11:37:17.362Z",
+          "elapsedMs": 6,
+          "ok": true,
+          "status": 200,
+          "message": "OK"
+        }
+      ]
+    }
+  ]
+}

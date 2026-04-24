@@ -1,0 +1,19 @@
+{
+  "mutant": {
+    "id": "HOSP-LOGIC-001",
+    "module": "Hospital Blood Request Workflow",
+    "type": "Logical operator change",
+    "file": "backend/controllers/hospitalController.js",
+    "description": "Allow partially empty request payloads through validation.",
+    "replacement": {
+      "find": "if (!labId || !bloodType || !units) {",
+      "replace": "if (!labId && !bloodType && !units) {"
+    },
+    "missingTest": "Covered by request validation tests."
+  },
+  "status": "Killed",
+  "exitCode": 1,
+  "signal": null,
+  "stdout": "\n> backend@1.0.0 test\n> NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand\n\n",
+  "stderr": "(node:28605) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nFAIL tests/api/hospital.test.js (5.85 s)\n  ● Console\n\n    console.log\n      [dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops\n\n      at _log (node_modules/dotenv/lib/main.js:142:11)\n\n  ● Hospital API › POST /api/hospital/blood/request rejects missing required fields\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: 400\n    Received: 404\n\n      50 |       .send({ bloodType: \"A+\" });\n      51 |\n    > 52 |     expect(response.status).toBe(400);\n         |                             ^\n      53 |     expect(response.body.message).toBe(\"Please provide labId, bloodType, and units\");\n      54 |   });\n      55 |\n\n      at Object.toBe (tests/api/hospital.test.js:52:29)\n\n\nTest Suites: 1 failed, 3 passed, 4 total\nTests:       1 failed, 1 todo, 40 passed, 42 total\nSnapshots:   0 total\nTime:        21.158 s, estimated 22 s\nRan all test suites.\n"
+}

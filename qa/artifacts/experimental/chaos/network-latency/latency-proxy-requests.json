@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/api/auth/profile",
+    "method": "GET",
+    "delayedByMs": 1500,
+    "startedAt": "2026-04-24T11:37:09.389Z"
+  },
+  {
+    "path": "/api/auth/profile",
+    "method": "GET",
+    "delayedByMs": 1500,
+    "startedAt": "2026-04-24T11:37:10.904Z"
+  },
+  {
+    "path": "/api/facility/labs",
+    "method": "GET",
+    "delayedByMs": 1500,
+    "startedAt": "2026-04-24T11:37:10.918Z"
+  },
+  {
+    "path": "/api/facility/labs",
+    "method": "GET",
+    "delayedByMs": 1500,
+    "startedAt": "2026-04-24T11:37:12.426Z"
+  }
+]

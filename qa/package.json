@@ -10,9 +10,15 @@
     "test:ui:headed": "playwright test --headed",
     "test:docker": "API_BASE_URL=http://127.0.0.1:3000 FRONTEND_BASE_URL=http://127.0.0.1 QA_ADMIN_EMAIL=suraj@admin.com QA_ADMIN_PASSWORD=bbms@admin npm test",
     "test:ui:docker": "API_BASE_URL=http://127.0.0.1:3000 FRONTEND_BASE_URL=http://127.0.0.1 QA_ADMIN_EMAIL=suraj@admin.com QA_ADMIN_PASSWORD=bbms@admin playwright test",
-    "wait": "node ./scripts/wait-for-http.mjs"
+    "wait": "node ./scripts/wait-for-http.mjs",
+    "experimental:performance": "node ./experimental/performance/run-performance.mjs",
+    "experimental:mutation": "node ./experimental/mutation/run-curated-mutations.mjs",
+    "experimental:chaos": "node ./experimental/chaos/run-chaos.mjs",
+    "experimental:visuals": "node ./experimental/reporting/generate-visuals.mjs",
+    "experimental:all": "npm run experimental:performance && npm run experimental:mutation && npm run experimental:chaos && npm run experimental:visuals"
   },
   "devDependencies": {
-    "@playwright/test": "^1.55.0"
+    "@playwright/test": "^1.55.0",
+    "mongodb-memory-server": "^11.0.1"
   }
 }

@@ -7,6 +7,11 @@
     "qa:test:docker": "npm --prefix qa run test:docker",
     "qa:test:ui:docker": "npm --prefix qa run test:ui:docker",
     "qa:test:api": "npm --prefix backend test",
-    "qa:test:ui": "npm --prefix qa run test:ui"
+    "qa:test:ui": "npm --prefix qa run test:ui",
+    "qa:experimental:performance": "npm --prefix qa run experimental:performance",
+    "qa:experimental:mutation": "npm --prefix qa run experimental:mutation",
+    "qa:experimental:chaos": "npm --prefix qa run experimental:chaos",
+    "qa:experimental:visuals": "npm --prefix qa run experimental:visuals",
+    "qa:experimental:all": "npm --prefix qa run experimental:all"
   }
 }

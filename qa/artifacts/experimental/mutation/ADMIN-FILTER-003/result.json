@@ -1,0 +1,19 @@
+{
+  "mutant": {
+    "id": "ADMIN-FILTER-003",
+    "module": "Facility Registration & Admin Approval",
+    "type": "Function removal",
+    "file": "backend/controllers/adminController.js",
+    "description": "Hide pending facilities from the listing endpoint.",
+    "replacement": {
+      "find": "const facilities = await Facility.find();",
+      "replace": "const facilities = await Facility.find({ status: \"approved\" });"
+    },
+    "missingTest": "Covered by the facilities listing test that expects both pending and approved entries."
+  },
+  "status": "Killed",
+  "exitCode": 1,
+  "signal": null,
+  "stdout": "\n> backend@1.0.0 test\n> NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand\n\n",
+  "stderr": "(node:28482) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nFAIL tests/api/admin.test.js\n  ● Console\n\n    console.log\n      [dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }\n\n      at _log (node_modules/dotenv/lib/main.js:142:11)\n\n  ● Admin Facility Approval API › GET /api/admin/facilities lists registered facilities for an authenticated admin\n\n    expect(received).toEqual(expected) // deep equality\n\n    Expected: ArrayContaining [ObjectContaining {\"email\": \"hospital.hospital-9c63451e@example.com\"}, ObjectContaining {\"email\": \"blood-lab.blood-lab-68689227@example.com\"}]\n    Received: [{\"__v\": 0, \"_id\": \"69eb4febb9912d83a0d6b8bb\", \"address\": {\"city\": \"Mumbai\", \"pincode\": \"400002\", \"state\": \"Maharashtra\", \"street\": \"45 Facility Road\"}, \"createdAt\": \"2026-04-24T11:11:39.413Z\", \"documents\": {\"registrationProof\": {\"filename\": \"blood-lab-blood-lab-68689227.pdf\", \"uploadedAt\": \"2026-04-24T11:11:39.413Z\", \"url\": \"https://example.com/blood-lab-blood-lab-68689227.pdf\"}}, \"email\": \"blood-lab.blood-lab-68689227@example.com\", \"emergencyContact\": \"8686892271\", \"emergencyServices\": false, \"facilityCategory\": \"Private\", \"facilityType\": \"blood-lab\", \"history\": [], \"is24x7\": false, \"isActive\": true, \"loginAttempts\": 0, \"name\": \"Test blood-lab blood-lab-68689227\", \"operatingHours\": {\"close\": \"18:00\", \"open\": \"09:00\", \"workingDays\": [\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\"]}, \"phone\": \"9686892271\", \"registrationNumber\": \"BLOOD-LAB-BLOOD-LAB-68689227\", \"role\": \"blood-lab\", \"status\": \"approved\", \"updatedAt\": \"2026-04-24T11:11:39.413Z\"}]\n\n      26 |\n      27 |     expect(response.status).toBe(200);\n    > 28 |     expect(response.body.facilities).toEqual(\n         |                                      ^\n      29 |       expect.arrayContaining([\n      30 |         expect.objectContaining({ email: hospital.email }),\n      31 |         expect.objectContaining({ email: bloodLab.email }),\n\n      at Object.toEqual (tests/api/admin.test.js:28:38)\n\n\nTest Suites: 1 failed, 3 passed, 4 total\nTests:       1 failed, 1 todo, 40 passed, 42 total\nSnapshots:   0 total\nTime:        21.273 s, estimated 22 s\nRan all test suites.\n"
+}

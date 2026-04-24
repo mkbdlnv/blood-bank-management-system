@@ -1,0 +1,41 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+      <rect width="980" height="560" fill="#FFF7ED" />
+      <rect x="24" y="24" width="932" height="512" rx="22" fill="#FFFFFF" stroke="#F1F5F9" />
+      <text x="80" y="58" font-size="28" font-weight="700" fill="#111827">Spike Test P95 Latency</text>
+      <text x="80" y="82" font-size="14" fill="#6B7280">95th percentile response time for the three highest-risk endpoints under spike load</text>
+      
+      <line x1="80" y1="440" x2="940" y2="440" stroke="#E5E7EB" stroke-width="1" />
+      <text x="68" y="445" text-anchor="end" font-size="12" fill="#6B7280">0</text>
+    
+      <line x1="80" y1="370" x2="940" y2="370" stroke="#E5E7EB" stroke-width="1" />
+      <text x="68" y="375" text-anchor="end" font-size="12" fill="#6B7280">5179</text>
+    
+      <line x1="80" y1="300" x2="940" y2="300" stroke="#E5E7EB" stroke-width="1" />
+      <text x="68" y="305" text-anchor="end" font-size="12" fill="#6B7280">10357</text>
+    
+      <line x1="80" y1="229.99999999999997" x2="940" y2="229.99999999999997" stroke="#E5E7EB" stroke-width="1" />
+      <text x="68" y="234.99999999999997" text-anchor="end" font-size="12" fill="#6B7280">15536</text>
+    
+      <line x1="80" y1="160" x2="940" y2="160" stroke="#E5E7EB" stroke-width="1" />
+      <text x="68" y="165" text-anchor="end" font-size="12" fill="#6B7280">20714</text>
+    
+      <line x1="80" y1="90" x2="940" y2="90" stroke="#E5E7EB" stroke-width="1" />
+      <text x="68" y="95" text-anchor="end" font-size="12" fill="#6B7280">25893</text>
+    
+      <line x1="80" y1="440" x2="940" y2="440" stroke="#94A3B8" stroke-width="2" />
+      
+      <rect x="80" y="135.65217391304344" width="274.6666666666667" height="304.34782608695656" rx="8" fill="#DC2626" />
+      <text x="217.33333333333334" y="125.65217391304344" text-anchor="middle" font-size="14" fill="#111827">22515.60 ms</text>
+      <text x="217.33333333333334" y="495" text-anchor="end" transform="rotate(-35 217.33333333333334 495)" font-size="13" fill="#374151">Auth Login</text>
+    
+      <rect x="372.6666666666667" y="432.5057971202575" width="274.6666666666667" height="7.49420287974251" rx="8" fill="#DC2626" />
+      <text x="510" y="422.5057971202575" text-anchor="middle" font-size="14" fill="#111827">554.42 ms</text>
+      <text x="510" y="495" text-anchor="end" transform="rotate(-35 510 495)" font-size="13" fill="#374151">Hospital Blood Request Creation</text>
+    
+      <rect x="665.3333333333334" y="432.5963441067114" width="274.6666666666667" height="7.403655893288585" rx="8" fill="#DC2626" />
+      <text x="802.6666666666667" y="422.5963441067114" text-anchor="middle" font-size="14" fill="#111827">547.72 ms</text>
+      <text x="802.6666666666667" y="495" text-anchor="end" transform="rotate(-35 802.6666666666667 495)" font-size="13" fill="#374151">Blood Stock Update</text>
+    
+    </svg>
+  

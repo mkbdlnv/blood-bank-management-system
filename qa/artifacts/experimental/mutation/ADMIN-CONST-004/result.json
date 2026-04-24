@@ -1,0 +1,19 @@
+{
+  "mutant": {
+    "id": "ADMIN-CONST-004",
+    "module": "Facility Registration & Admin Approval",
+    "type": "Constant alteration",
+    "file": "backend/controllers/adminController.js",
+    "description": "Reject-path sets status back to approved.",
+    "replacement": {
+      "find": "facility.status = \"rejected\";",
+      "replace": "facility.status = \"approved\";"
+    },
+    "missingTest": "Covered by reject workflow assertions."
+  },
+  "status": "Killed",
+  "exitCode": 1,
+  "signal": null,
+  "stdout": "\n> backend@1.0.0 test\n> NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand\n\n",
+  "stderr": "(node:28544) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nFAIL tests/api/admin.test.js\n  ● Console\n\n    console.log\n      [dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }\n\n      at _log (node_modules/dotenv/lib/main.js:142:11)\n\n  ● Admin Facility Approval API › PUT /api/admin/facility/reject/:id rejects a facility and stores the reason\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: \"rejected\"\n    Received: \"approved\"\n\n      87 |     expect(response.status).toBe(200);\n      88 |     expect(response.body.message).toBe(\"Facility rejected and status updated\");\n    > 89 |     expect(updatedFacility.status).toBe(\"rejected\");\n         |                                    ^\n      90 |     expect(updatedFacility.rejectionReason).toBe(\"Incomplete registration documents\");\n      91 |   });\n      92 |\n\n      at Object.toBe (tests/api/admin.test.js:89:36)\n\n\nTest Suites: 1 failed, 3 passed, 4 total\nTests:       1 failed, 1 todo, 40 passed, 42 total\nSnapshots:   0 total\nTime:        21.184 s, estimated 22 s\nRan all test suites.\n"
+}

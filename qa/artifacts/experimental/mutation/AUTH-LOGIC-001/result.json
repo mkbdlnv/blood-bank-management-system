@@ -1,0 +1,19 @@
+{
+  "mutant": {
+    "id": "AUTH-LOGIC-001",
+    "module": "Authentication & Role-Based Access",
+    "type": "Logical operator change",
+    "file": "backend/controllers/authContoller.js",
+    "description": "Allow requests with one missing credential to pass validation.",
+    "replacement": {
+      "find": "if (!email || !password)",
+      "replace": "if (!email && !password)"
+    },
+    "missingTest": "Covered by existing login validation tests."
+  },
+  "status": "Survived",
+  "exitCode": 0,
+  "signal": null,
+  "stdout": "\n> backend@1.0.0 test\n> NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand\n\n",
+  "stderr": "(node:28018) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nTest Suites: 4 passed, 4 total\nTests:       1 todo, 41 passed, 42 total\nSnapshots:   0 total\nTime:        20.776 s, estimated 21 s\nRan all test suites.\n"
+}

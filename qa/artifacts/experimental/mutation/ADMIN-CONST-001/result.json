@@ -1,0 +1,19 @@
+{
+  "mutant": {
+    "id": "ADMIN-CONST-001",
+    "module": "Facility Registration & Admin Approval",
+    "type": "Constant alteration",
+    "file": "backend/controllers/adminController.js",
+    "description": "Leave approved facilities in pending status.",
+    "replacement": {
+      "find": "facility.status = \"approved\";",
+      "replace": "facility.status = \"pending\";"
+    },
+    "missingTest": "Covered by approval workflow assertions."
+  },
+  "status": "Killed",
+  "exitCode": 1,
+  "signal": null,
+  "stdout": "\n> backend@1.0.0 test\n> NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand\n\n",
+  "stderr": "(node:28352) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nFAIL tests/api/admin.test.js\n  ● Console\n\n    console.log\n      [dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }\n\n      at _log (node_modules/dotenv/lib/main.js:142:11)\n\n  ● Admin Facility Approval API › PUT /api/admin/facility/approve/:id approves a pending facility\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: \"approved\"\n    Received: \"pending\"\n\n      56 |     expect(response.status).toBe(200);\n      57 |     expect(response.body.message).toBe(\"Facility approved\");\n    > 58 |     expect(updatedFacility.status).toBe(\"approved\");\n         |                                    ^\n      59 |   });\n      60 |\n      61 |   test(\"PUT /api/admin/facility/approve/:id returns 404 for an unknown facility id\", async () => {\n\n      at Object.toBe (tests/api/admin.test.js:58:36)\n\nTest Suites: 1 failed, 3 passed, 4 total\nTests:       1 failed, 1 todo, 40 passed, 42 total\nSnapshots:   0 total\nTime:        21.365 s, estimated 22 s\nRan all test suites.\n"
+}

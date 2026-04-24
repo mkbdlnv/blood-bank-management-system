@@ -1,0 +1,19 @@
+{
+  "mutant": {
+    "id": "LAB-CONST-003",
+    "module": "Blood Stock & Inventory Management",
+    "type": "Constant alteration",
+    "file": "backend/controllers/bloodLabController.js",
+    "description": "Block removal when requested units equal available stock.",
+    "replacement": {
+      "find": "    if (stock.quantity < quantity) {",
+      "replace": "    if (stock.quantity <= quantity) {"
+    },
+    "missingTest": "Missing test: allow exact-quantity removal and delete the stock record when it reaches zero."
+  },
+  "status": "Survived",
+  "exitCode": 0,
+  "signal": null,
+  "stdout": "\n> backend@1.0.0 test\n> NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand\n\n",
+  "stderr": "(node:28973) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nTest Suites: 4 passed, 4 total\nTests:       1 todo, 41 passed, 42 total\nSnapshots:   0 total\nTime:        21.385 s, estimated 22 s\nRan all test suites.\n"
+}
